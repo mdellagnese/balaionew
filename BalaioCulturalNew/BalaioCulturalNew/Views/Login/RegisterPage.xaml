@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="BalaioCulturalNew.Views.Login.RegisterPage"
+             BackgroundImage="bg2.jpg"
+             NavigationPage.HasNavigationBar="False"
+             Padding="30,0">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" 
+                   Text="FALTA POUCO PARA VOCÊ ENCONTRAR SEUS EVENTOS FAVORITOS :)"
+                   TextColor="White"
+                   LineBreakMode="WordWrap"
+                   FontSize="Small"
+                   WidthRequest="400"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center"
+                   />
+            
+            <Button Grid.Row="1" 
+                    Text="CADASTRE-SE COM O FACEBOOK"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    TextColor="White"
+                    WidthRequest="400"
+                    BackgroundColor="#3b5998"/>
+
+            <Label Grid.Row="2" 
+                   Text="OU POR E-MAIL  "
+                   TextColor="White"
+                   LineBreakMode="WordWrap"
+                   FontSize="Micro"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="0, 5"/>
+
+            <Entry Grid.Row="3"
+                   Placeholder="E-mail"
+                   TextColor="White"
+                   FontSize="Medium"
+                   PlaceholderColor="White"/>
+
+            <Entry Grid.Row="4"
+                   Placeholder="Senha"
+                   IsPassword="True"
+                   TextColor="White"
+                   FontSize="Medium"
+                   PlaceholderColor="White"/>
+            
+            <!--<StackLayout Grid.Row="4"
+                        Orientation="Horizontal">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"></ColumnDefinition>
+                        <ColumnDefinition Width="150"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" 
+                        Text="Cidade"
+                        TextColor="Yellow"
+                        FontSize="Micro"/>
+                    
+                    <Picker Grid.Row="1" Grid.Column="0">
+                        <Picker.Items>
+                            <x:String>Porto Alegre</x:String>
+                            <x:String>Santa Catarina</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Grid.Row="0" Grid.Column="1" 
+                        Text="Estado"
+                        TextColor="Yellow"
+                        FontSize="Micro"/>
+
+                    <Picker Grid.Row="1" Grid.Column="1">
+                        <Picker.Items>
+                            <x:String>Porto Alegre</x:String>
+                            <x:String>Santa Catarina</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+            </StackLayout>-->
+
+            <Button Grid.Row="5" 
+                    Text="Enviar
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    TextColor="White"
+                    WidthRequest="400"
+                    BackgroundColor="#994F94"
+                    BorderRadius="100"/>
+
+        </Grid>
+    </ScrollView>
+  
+</ContentPage>

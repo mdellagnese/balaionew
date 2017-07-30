@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="BalaioCulturalNew.Views.Login.EntryPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImage="bg1.jpg">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Source="font_logo.png" Aspect="AspectFit" WidthRequest="150" Margin="60,10,60,0" ></Image>
+
+        <Button Grid.Row="1" 
+                Text="ENTRE COM O FACEBOOK"
+                WidthRequest="400"
+                HeightRequest="55"
+                Margin="30,0"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                TextColor="White"
+                BackgroundColor="#3b5998"
+                BorderRadius="100" 
+                />
+
+        <Label Grid.Row="2" Text="OU" TextColor="White" HorizontalOptions="Center"/>
+
+        <StackLayout Grid.Row="3" Margin="30,0,30,10" VerticalOptions="FillAndExpand">
+            <Entry BackgroundColor="Transparent" 
+                   Placeholder="Usuário ou e-mail" 
+                   PlaceholderColor="White"
+                   Margin="20, 5"/>
+            <Entry BackgroundColor="Transparent" 
+                   Placeholder="Senha" 
+                   IsPassword="True" 
+                   PlaceholderColor="White"
+                   Margin="20, 5"/>
+        </StackLayout>
+
+        <Button Grid.Row="4" 
+                Text="ENTRAR"
+                Margin="30,0,30,0"
+                VerticalOptions="Center"
+                WidthRequest="400"
+                HeightRequest="55"
+                TextColor="White"
+                BackgroundColor="#994F94"
+                HorizontalOptions="Center"
+                BorderRadius="100"/>
+
+        <Label Grid.Row="5" Text="Esqueceu seus dados?" TextColor="White" HorizontalOptions="Center" Margin="10" FontSize="Small"/>
+        
+        <StackLayout Grid.Row="6" Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Ainda não tem uma conta?" TextColor="White" HorizontalOptions="Center" FontSize="Small"/>
+            <Label Text="Cadastre-se!" TextColor="White" FontAttributes="Bold" FontSize="Small"/>
+        </StackLayout>
+        
+    </Grid>
+  
+</ContentPage>

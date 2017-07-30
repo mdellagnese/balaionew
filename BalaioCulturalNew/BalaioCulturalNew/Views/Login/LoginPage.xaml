@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="BalaioCulturalNew.Views.Login.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImage="bg1.jpg">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Source="font_logo.png" Aspect="AspectFit" WidthRequest="200" Margin="60,30,60,60"></Image>
+        
+        <StackLayout Grid.Row="1" Padding="30,40,30,0">
+            <Button 
+                WidthRequest="400"
+                HeightRequest="55"
+                Text="Criar Conta" 
+                Command="{Binding NewAccountCommand}"
+                BorderRadius="100"
+                BackgroundColor="White"
+                TextColor="#994F94"
+                HorizontalOptions="CenterAndExpand"
+                />
+            <Label HorizontalOptions="Center" TextColor="White">OU</Label>
+            <Button 
+                WidthRequest="400"
+                HeightRequest="55"
+                Text="Entrar"
+                BorderRadius="30"
+                BackgroundColor="#994F94"
+                TextColor="White"
+                HorizontalOptions="CenterAndExpand"
+                Command="{Binding NavigateToEntryPageCommand}"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
