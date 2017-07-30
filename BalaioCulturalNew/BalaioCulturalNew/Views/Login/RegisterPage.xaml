@@ -98,7 +98,7 @@
             </StackLayout>-->
 
             <Button Grid.Row="5" 
-                    Text="Enviar
+                    Text="Enviar"   
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     TextColor="White"
