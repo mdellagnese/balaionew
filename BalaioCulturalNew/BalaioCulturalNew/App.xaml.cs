@@ -1,5 +1,4 @@
-﻿using DryIoc;
-using Prism.DryIoc;
+﻿using Prism.DryIoc;
 using BalaioCulturalNew.Views;
 using Xamarin.Forms;
 using BalaioCulturalNew.Views.Login;
@@ -7,8 +6,7 @@ using BalaioCulturalNew.Views.Templates;
 using BalaioCulturalNew.Views.Feed;
 using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-
+//[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace BalaioCulturalNew
 {
     public partial class App : PrismApplication
