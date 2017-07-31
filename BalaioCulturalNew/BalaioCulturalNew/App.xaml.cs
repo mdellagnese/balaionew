@@ -5,6 +5,9 @@ using Xamarin.Forms;
 using BalaioCulturalNew.Views.Login;
 using BalaioCulturalNew.Views.Templates;
 using BalaioCulturalNew.Views.Feed;
+using Xamarin.Forms.Xaml;
+
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
 namespace BalaioCulturalNew
 {
