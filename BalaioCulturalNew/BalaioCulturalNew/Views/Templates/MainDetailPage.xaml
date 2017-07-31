@@ -4,7 +4,8 @@
             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
             xmlns:feed="clr-namespace:BalaioCulturalNew.Views.Feed"
             prism:ViewModelLocator.AutowireViewModel="True"
-            x:Class="BalaioCulturalNew.Views.Templates.MainDetailPage">
+            x:Class="BalaioCulturalNew.Views.Templates.MainDetailPage"
+            BarBackgroundColor="#994F94">
     <feed:FeedPage Title="Feed"></feed:FeedPage>
     <ContentPage Title="Meu Balaio"></ContentPage>
     <ContentPage Title="Locais"></ContentPage>

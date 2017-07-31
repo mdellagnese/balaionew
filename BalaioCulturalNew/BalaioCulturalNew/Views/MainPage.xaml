@@ -9,7 +9,15 @@
         <templates:MainMenuPage Title="Menu" Icon="ic_menu_white.png"></templates:MainMenuPage>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
-        <templates:MainDetailPage></templates:MainDetailPage>
+        <NavigationPage BarBackgroundColor="#994F94" BarTextColor="White">
+            <NavigationPage.ToolbarItems>
+                <ToolbarItem Text="Filtro" Order="Primary" Priority="0"></ToolbarItem>
+                <ToolbarItem Text="Busca" Order="Primary" Priority="1"></ToolbarItem>
+            </NavigationPage.ToolbarItems>
+            <x:Arguments>
+                <templates:MainDetailPage/>
+            </x:Arguments>
+        </NavigationPage>
     </MasterDetailPage.Detail>
 </MasterDetailPage>
     

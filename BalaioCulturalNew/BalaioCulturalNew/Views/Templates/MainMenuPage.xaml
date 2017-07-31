@@ -4,7 +4,8 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Templates.MainMenuPage">
-    <StackLayout>
+    <StackLayout Padding=" 10">
         <Button Text="Opção 1"></Button>
+        <Button Text="Opção 2"></Button>
     </StackLayout>
 </ContentPage>

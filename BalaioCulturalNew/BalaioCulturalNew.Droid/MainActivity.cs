@@ -23,6 +23,8 @@ namespace BalaioCulturalNew.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
+            //Status bar color
+            Window.SetStatusBarColor(Android.Graphics.Color.Rgb(153, 79, 148));
         }
     }
 
