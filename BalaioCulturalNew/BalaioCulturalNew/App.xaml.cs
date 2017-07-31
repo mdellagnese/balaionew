@@ -3,6 +3,8 @@ using Prism.DryIoc;
 using BalaioCulturalNew.Views;
 using Xamarin.Forms;
 using BalaioCulturalNew.Views.Login;
+using BalaioCulturalNew.Views.Templates;
+using BalaioCulturalNew.Views.Feed;
 
 namespace BalaioCulturalNew
 {
@@ -15,16 +17,20 @@ namespace BalaioCulturalNew
             InitializeComponent();
 
             //NavigationService.NavigateAsync("NavigationPage/MainPage?title=Hello%20from%20Xamarin.Forms");
-            NavigationService.NavigateAsync("NavigationPage/LoginPage");
+            //NavigationService.NavigateAsync("NavigationPage/LoginPage");
+            NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
 
         protected override void RegisterTypes()
         {
             Container.RegisterTypeForNavigation<NavigationPage>();
-            Container.RegisterTypeForNavigation<MainPage>();
             Container.RegisterTypeForNavigation<LoginPage>();
             Container.RegisterTypeForNavigation<RegisterPage>();
             Container.RegisterTypeForNavigation<EntryPage>();
+            Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<MainMenuPage>();
+            Container.RegisterTypeForNavigation<MainDetailPage>();
+            Container.RegisterTypeForNavigation<FeedPage>();
         }
     }
 }

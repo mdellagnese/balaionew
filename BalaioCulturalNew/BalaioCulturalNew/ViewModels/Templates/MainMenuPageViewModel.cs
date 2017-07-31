@@ -4,13 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BalaioCulturalNew.ViewModels
+namespace BalaioCulturalNew.ViewModels.Templates
 {
-	public class MainPageViewModel : BindableBase
+	public class MainMenuPageViewModel : BindableBase
 	{
-        public MainPageViewModel()
+        public MainMenuPageViewModel()
         {
-            
+
         }
 	}
 }
