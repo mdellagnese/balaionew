@@ -19,6 +19,11 @@ namespace BalaioCulturalNew.ViewModels
             _pageDialogService = pageDialogService;
         }
 
+        public BaseViewModel(INavigationService navigationService)
+        {
+            _navigationService = navigationService;
+        }
+
         public void OnNavigatedFrom(NavigationParameters parameters)
         {
             

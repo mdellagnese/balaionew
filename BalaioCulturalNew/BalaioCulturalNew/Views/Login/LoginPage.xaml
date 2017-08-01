@@ -13,25 +13,33 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Image Grid.Row="0" Source="font_logo.png" Aspect="AspectFit" WidthRequest="200" Margin="60,30,60,60"></Image>
-        
-        <StackLayout Grid.Row="1" Padding="30,40,30,0">
+        <Image Grid.Row="0" 
+               Source="font_logo.png" 
+               Aspect="AspectFit" 
+               WidthRequest="200" 
+               Margin="60,30,60,60"/>
+
+        <StackLayout Grid.Row="1" Padding="30,40,30,0" Spacing="5">
             <Button 
                 WidthRequest="400"
                 HeightRequest="55"
                 Text="Criar Conta" 
                 Command="{Binding NewAccountCommand}"
-                BorderRadius="100"
+                BorderRadius="25"
                 BackgroundColor="White"
                 TextColor="#994F94"
                 HorizontalOptions="CenterAndExpand"
                 />
-            <Label HorizontalOptions="Center" TextColor="White">OU</Label>
+            <Label 
+                Text="OU"
+                HorizontalOptions="Center" 
+                TextColor="White" 
+                FontSize="Small"/>
             <Button 
                 WidthRequest="400"
                 HeightRequest="55"
                 Text="Entrar"
-                BorderRadius="30"
+                BorderRadius="25"
                 BackgroundColor="#994F94"
                 TextColor="White"
                 HorizontalOptions="CenterAndExpand"

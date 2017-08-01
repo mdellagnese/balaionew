@@ -5,15 +5,17 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Login.RegisterPage"
              BackgroundImage="bg2.jpg"
-             NavigationPage.HasNavigationBar="False"
-             Padding="30,0">
+             Padding="30,20"
+             NavigationPage.HasNavigationBar="False">
 
-    <ScrollView>
-        <Grid>
+    
+    <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
                 <RowDefinition Height="55"></RowDefinition>
                 <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
@@ -50,6 +52,7 @@
                    Placeholder="E-mail"
                    TextColor="White"
                    FontSize="Medium"
+                   BackgroundColor="Transparent"
                    PlaceholderColor="White"/>
 
             <Entry Grid.Row="4"
@@ -57,56 +60,37 @@
                    IsPassword="True"
                    TextColor="White"
                    FontSize="Medium"
+                   BackgroundColor="Transparent"
                    PlaceholderColor="White"/>
-            
-            <!--<StackLayout Grid.Row="4"
-                        Orientation="Horizontal">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="150"></ColumnDefinition>
-                        <ColumnDefinition Width="150"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
 
-                    <Label Grid.Row="0" Grid.Column="0" 
-                        Text="Cidade"
-                        TextColor="Yellow"
-                        FontSize="Micro"/>
-                    
-                    <Picker Grid.Row="1" Grid.Column="0">
-                        <Picker.Items>
-                            <x:String>Porto Alegre</x:String>
-                            <x:String>Santa Catarina</x:String>
-                        </Picker.Items>
-                    </Picker>
+            <Entry Grid.Row="5"
+                   Placeholder="Repita a senha"
+                   IsPassword="True"
+                   TextColor="White"
+                   FontSize="Medium"
+                   BackgroundColor="Transparent"
+                   PlaceholderColor="White"/>
 
-                    <Label Grid.Row="0" Grid.Column="1" 
-                        Text="Estado"
-                        TextColor="Yellow"
-                        FontSize="Micro"/>
-
-                    <Picker Grid.Row="1" Grid.Column="1">
-                        <Picker.Items>
-                            <x:String>Porto Alegre</x:String>
-                            <x:String>Santa Catarina</x:String>
-                        </Picker.Items>
-                    </Picker>
-                </Grid>
-            </StackLayout>-->
-
-            <Button Grid.Row="5" 
+            <Button Grid.Row="6" 
                     Text="Enviar"   
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     TextColor="White"
                     WidthRequest="400"
                     BackgroundColor="#994F94"
-                    BorderRadius="100"/>
+                    BorderRadius="25"/>
 
-        </Grid>
-    </ScrollView>
+        <Button Grid.Row="7" 
+                    Text="Já tem uma conta? Então, entre aqui." 
+                    TextColor="White"
+                    FontSize="Micro"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    Command="{Binding NavigateToEntryPageCommand}">
+            
+        </Button>
+
+    </Grid>
+    
   
 </ContentPage>

@@ -7,13 +7,14 @@ using System.Linq;
 
 namespace BalaioCulturalNew.ViewModels.Login
 {
-    public class RegisterPageViewModel : BindableBase
+    public class RegisterPageViewModel : BaseViewModel
     {
-        private INavigationService _navigationService;
+        public DelegateCommand NavigateToEntryPageCommand { get; private set; }
 
-        public RegisterPageViewModel(INavigationService navigationService)
+        public RegisterPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            _navigationService = navigationService;
+            NavigateToEntryPageCommand = new DelegateCommand(() => _navigationService.GoBackAsync());
         }
+        
     }
 }

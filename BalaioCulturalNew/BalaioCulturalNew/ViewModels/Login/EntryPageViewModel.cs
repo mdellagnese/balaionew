@@ -7,13 +7,11 @@ using System.Linq;
 
 namespace BalaioCulturalNew.ViewModels.Login
 {
-	public class EntryPageViewModel : BindableBase
+	public class EntryPageViewModel : BaseViewModel
 	{
-        private INavigationService _navigationService;
-
-        public EntryPageViewModel(INavigationService navigationService)
+        public EntryPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            _navigationService = navigationService;
+            
         }
 	}
 }

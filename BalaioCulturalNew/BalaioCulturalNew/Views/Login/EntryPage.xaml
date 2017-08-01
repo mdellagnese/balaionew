@@ -29,21 +29,25 @@
                 HorizontalOptions="Center"
                 TextColor="White"
                 BackgroundColor="#3b5998"
-                BorderRadius="100" 
+                BorderRadius="25" 
                 />
 
         <Label Grid.Row="2" Text="OU" TextColor="White" HorizontalOptions="Center"/>
 
-        <StackLayout Grid.Row="3" Margin="30,0,30,10" VerticalOptions="FillAndExpand">
+        <StackLayout Grid.Row="3" 
+                     Margin="30,0,30,10" 
+                     VerticalOptions="FillAndExpand"
+                     Padding="20,0"
+                     Spacing="5">
             <Entry BackgroundColor="Transparent" 
                    Placeholder="Usuário ou e-mail" 
                    PlaceholderColor="White"
-                   Margin="20, 5"/>
+                   />
             <Entry BackgroundColor="Transparent" 
                    Placeholder="Senha" 
                    IsPassword="True" 
                    PlaceholderColor="White"
-                   Margin="20, 5"/>
+                   />
         </StackLayout>
 
         <Button Grid.Row="4" 
@@ -55,7 +59,7 @@
                 TextColor="White"
                 BackgroundColor="#994F94"
                 HorizontalOptions="Center"
-                BorderRadius="100"/>
+                BorderRadius="25"/>
 
         <Label Grid.Row="5" Text="Esqueceu seus dados?" TextColor="White" HorizontalOptions="Center" Margin="10" FontSize="Small"/>
         

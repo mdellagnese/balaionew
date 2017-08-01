@@ -1,14 +1,15 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
+using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace BalaioCulturalNew.ViewModels.Feed
 {
-	public class FeedPageViewModel : BindableBase
+	public class FeedPageViewModel : BaseViewModel
 	{
-        public FeedPageViewModel()
+        public FeedPageViewModel(INavigationService navigationService) : base(navigationService)
         {
 
         }
