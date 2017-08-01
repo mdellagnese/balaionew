@@ -13,5 +13,7 @@ namespace BalaioCulturalNew.ViewModels.Feed
         {
 
         }
+        
 	}
+
 }
