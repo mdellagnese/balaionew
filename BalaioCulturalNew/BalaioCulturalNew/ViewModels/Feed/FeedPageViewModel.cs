@@ -12,7 +12,7 @@ namespace BalaioCulturalNew.ViewModels.Feed
     {
         public FeedPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            Events = new ObservableCollection<string> { "Teste" };
+            Events = new ObservableCollection<string> { "Teste", "Teste 2", "Teste 2" };
         }
 
         private ObservableCollection<String> _events;

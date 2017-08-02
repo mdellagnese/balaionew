@@ -18,16 +18,38 @@
                   SeparatorVisibility="None"
                   HasUnevenRows="True"
                   BackgroundColor="Transparent"
-                  RowHeight="300">
+                  RowHeight="300"
+                  Header="">
             <!--<ListView.Behaviors>
                 <behaviors:EventToCommandBehavior EventName="ItemTapped" Command="{Binding ItemTappedCommand}">
                     
                 </behaviors:EventToCommandBehavior>
             </ListView.Behaviors>-->
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <Grid RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label Text="04" 
+                                FontSize="Medium" 
+                                TextColor="Black"
+                                BackgroundColor="Transparent"
+                                />
+                        <Label  Grid.Row="1" Text="AGO" 
+                                FontSize="Small" 
+                                TextColor="Black"
+                                BackgroundColor="Transparent"
+                                />
+                    </Grid>
+                    
+                </DataTemplate>
+            </ListView.HeaderTemplate>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid RowSpacing="5" ColumnSpacing="0">
+                        <Grid RowSpacing="20" ColumnSpacing="0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="50"></RowDefinition>
                                 <RowDefinition Height="100"></RowDefinition>
@@ -39,7 +61,12 @@
                                 <ColumnDefinition Width="100"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             
-                            <Image HeightRequest="200" Aspect="Fill" BackgroundColor="PaleGreen" Grid.RowSpan="2" Grid.ColumnSpan="3"></Image>
+                            <Image 
+                                Source="http://lorempixel.com/output/people-q-c-640-480-9.jpg"
+                                HeightRequest="200" 
+                                Aspect="AspectFill" 
+                                Grid.RowSpan="2" 
+                                Grid.ColumnSpan="3"></Image>
 
                             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
                                    Text="Título" 
