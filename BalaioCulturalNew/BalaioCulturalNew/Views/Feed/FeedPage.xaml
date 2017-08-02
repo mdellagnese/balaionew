@@ -18,7 +18,7 @@
                   SeparatorVisibility="None"
                   HasUnevenRows="True"
                   BackgroundColor="Transparent"
-                  RowHeight="150">
+                  RowHeight="300">
             <!--<ListView.Behaviors>
                 <behaviors:EventToCommandBehavior EventName="ItemTapped" Command="{Binding ItemTappedCommand}">
                     
@@ -29,9 +29,9 @@
                     <ViewCell>
                         <Grid RowSpacing="5" ColumnSpacing="0">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="*"></RowDefinition>
-                                <RowDefinition Height="*"></RowDefinition>
-                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="50"></RowDefinition>
+                                <RowDefinition Height="100"></RowDefinition>
+                                <RowDefinition Height="50"></RowDefinition>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50"></ColumnDefinition>
@@ -39,21 +39,23 @@
                                 <ColumnDefinition Width="100"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             
-                            <Image BackgroundColor="PaleGreen" Grid.RowSpan="2" Grid.ColumnSpan="3"></Image>
+                            <Image HeightRequest="200" Aspect="Fill" BackgroundColor="PaleGreen" Grid.RowSpan="2" Grid.ColumnSpan="3"></Image>
 
                             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
                                    Text="Título" 
                                    TextColor="White"
-                                   FontSize="Micro"/>
+                                   FontSize="Micro"
+                                   Margin="5"/>
 
-                            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                            <Label BackgroundColor="Transparent" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
                                    Text="Descrição" 
                                    TextColor="White"
-                                   FontSize="Micro"/>
+                                   FontSize="Small"
+                                   Margin="5"/>
 
-                            <Label Grid.Row="2" Grid.Column="0" Text="22h" TextColor="Black"></Label>
-                            <Label Grid.Row="2" Grid.Column="1" Text="Sinners" TextColor="Black"></Label>
-                            <Label Grid.Row="2" Grid.Column="2" Text="---" TextColor="Black" HorizontalTextAlignment="End"></Label>
+                            <Label HeightRequest="50" VerticalTextAlignment="Center" BackgroundColor="Beige" Grid.Row="2" Grid.Column="0" Text="22h" TextColor="Black"></Label>
+                            <Label HeightRequest="50" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="1" Text="Sinners" TextColor="Black"></Label>
+                            <Label HeightRequest="50" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="2" Text="---" TextColor="Black" HorizontalTextAlignment="End"></Label>
 
                         </Grid>
                     </ViewCell>

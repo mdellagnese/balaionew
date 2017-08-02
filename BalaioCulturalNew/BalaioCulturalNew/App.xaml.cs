@@ -17,8 +17,8 @@ namespace BalaioCulturalNew
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("NavigationPage/LoginPage");
-            //NavigationService.NavigateAsync("MainPage");
+            //NavigationService.NavigateAsync("NavigationPage/LoginPage");
+            NavigationService.NavigateAsync("MainPage");
         }
 
         protected override void RegisterTypes()
