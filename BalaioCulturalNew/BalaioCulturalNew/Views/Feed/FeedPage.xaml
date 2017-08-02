@@ -17,12 +17,48 @@
         <ListView ItemsSource="{Binding Events}"
                   SeparatorVisibility="None"
                   HasUnevenRows="True"
-                  BackgroundColor="Transparent">
+                  BackgroundColor="Transparent"
+                  RowHeight="150">
             <!--<ListView.Behaviors>
                 <behaviors:EventToCommandBehavior EventName="ItemTapped" Command="{Binding ItemTappedCommand}">
                     
                 </behaviors:EventToCommandBehavior>
             </ListView.Behaviors>-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid RowSpacing="5" ColumnSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Image BackgroundColor="PaleGreen" Grid.RowSpan="2" Grid.ColumnSpan="3"></Image>
+
+                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                                   Text="Título" 
+                                   TextColor="White"
+                                   FontSize="Micro"/>
+
+                            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                                   Text="Descrição" 
+                                   TextColor="White"
+                                   FontSize="Micro"/>
+
+                            <Label Grid.Row="2" Grid.Column="0" Text="22h" TextColor="Black"></Label>
+                            <Label Grid.Row="2" Grid.Column="1" Text="Sinners" TextColor="Black"></Label>
+                            <Label Grid.Row="2" Grid.Column="2" Text="---" TextColor="Black" HorizontalTextAlignment="End"></Label>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
 </ContentPage>

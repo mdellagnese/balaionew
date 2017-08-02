@@ -9,9 +9,11 @@ namespace BalaioCulturalNew.ViewModels.Login
 {
 	public class EntryPageViewModel : BaseViewModel
 	{
+        public DelegateCommand NavigateToMainMenuCommand { get; private set; }
+
         public EntryPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            
+            NavigateToMainMenuCommand = new DelegateCommand(() => _navigationService.NavigateAsync("MainPage", null, true));
         }
 	}
 }

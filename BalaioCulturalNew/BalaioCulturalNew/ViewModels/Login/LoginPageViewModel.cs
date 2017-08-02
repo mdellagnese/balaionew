@@ -12,8 +12,7 @@ namespace BalaioCulturalNew.ViewModels.Login
     {
         public DelegateCommand NewAccountCommand { get; private set; }
         public DelegateCommand NavigateToEntryPageCommand { get; private set; }
-        
-
+       
         public LoginPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService) : base(navigationService, pageDialogService)
         {
             NewAccountCommand = new DelegateCommand(NavigateToRegister);

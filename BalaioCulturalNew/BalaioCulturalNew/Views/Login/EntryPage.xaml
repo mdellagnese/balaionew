@@ -59,7 +59,8 @@
                 TextColor="White"
                 BackgroundColor="#994F94"
                 HorizontalOptions="Center"
-                BorderRadius="25"/>
+                BorderRadius="25"
+                Command="{Binding NavigateToMainMenuCommand}"/>
 
         <Label Grid.Row="5" Text="Esqueceu seus dados?" TextColor="White" HorizontalOptions="Center" Margin="10" FontSize="Small"/>
         
