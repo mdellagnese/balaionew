@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:local="clr-namespace:BalaioCulturalNew.CustomControls;assembly=BalaioCulturalNew"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Login.RegisterPage"
              BackgroundImage="bg2.jpg"
@@ -80,17 +81,13 @@
                     BackgroundColor="#994F94"
                     BorderRadius="25"/>
 
-        <Button Grid.Row="7" 
+            <local:CustomButton Grid.Row="7" 
                     Text="Já tem uma conta? Então, entre aqui." 
                     TextColor="White"
                     FontSize="Micro"
                     BackgroundColor="Transparent"
                     BorderColor="Transparent"
-                    Command="{Binding NavigateToEntryPageCommand}">
-            
-        </Button>
+                    Command="{Binding NavigateToEntryPageCommand}"/>
 
     </Grid>
-    
-  
 </ContentPage>
