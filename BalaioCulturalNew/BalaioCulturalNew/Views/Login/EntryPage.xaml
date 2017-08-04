@@ -29,7 +29,8 @@
                 HorizontalOptions="Center"
                 TextColor="White"
                 BackgroundColor="#3b5998"
-                BorderRadius="25" 
+                BorderRadius="25"
+                Command="{Binding FacebookLoginCommand}"
                 />
 
         <Label Grid.Row="2" Text="OU" TextColor="White" HorizontalOptions="Center"/>

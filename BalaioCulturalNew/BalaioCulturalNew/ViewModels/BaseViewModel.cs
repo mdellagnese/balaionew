@@ -38,5 +38,11 @@ namespace BalaioCulturalNew.ViewModels
         {
             
         }
+
+        public void NavigateToUri(string uriText)
+        {
+            if (uriText != null)
+                _navigationService.NavigateAsync(uriText);
+        }
     }
 }

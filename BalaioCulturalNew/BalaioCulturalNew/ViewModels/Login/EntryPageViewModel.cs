@@ -10,10 +10,14 @@ namespace BalaioCulturalNew.ViewModels.Login
 	public class EntryPageViewModel : BaseViewModel
 	{
         public DelegateCommand NavigateToMainMenuCommand { get; private set; }
-
+        public DelegateCommand FacebookLoginCommand { get; private set; }
+        
         public EntryPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            NavigateToMainMenuCommand = new DelegateCommand(() => _navigationService.NavigateAsync("MainPage", null, true));
+            //Adicionar ObservesProperty para o preenchimento do form
+            NavigateToMainMenuCommand = new DelegateCommand(() => _navigationService.NavigateAsync("app:///MainPage"));
+
+            FacebookLoginCommand = new DelegateCommand(() => _navigationService.NavigateAsync("FacebookLoginPage",null,true));
         }
 	}
 }

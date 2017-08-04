@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using DryIoc;
 using Prism.DryIoc;
+using Prism.Navigation;
 
 namespace BalaioCulturalNew.Droid
 {
@@ -32,7 +33,7 @@ namespace BalaioCulturalNew.Droid
     {
         public void RegisterTypes(IContainer container)
         {
-
+            
         }
     }
 }
