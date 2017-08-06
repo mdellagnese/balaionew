@@ -5,7 +5,7 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Login.LoginPage"
              NavigationPage.HasNavigationBar="False"
-             BackgroundImage="bg1.jpg">
+             BackgroundImage="bg1.png">
 
     <Grid>
         <Grid.RowDefinitions>

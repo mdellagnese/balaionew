@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:BalaioCulturalNew.CustomControls;assembly=BalaioCulturalNew"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Login.RegisterPage"
-             BackgroundImage="bg2.jpg"
+             BackgroundImage="bg2.png"
              Padding="30,20"
              NavigationPage.HasNavigationBar="False">
 

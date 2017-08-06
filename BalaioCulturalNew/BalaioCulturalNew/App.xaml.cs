@@ -74,5 +74,16 @@ namespace BalaioCulturalNew
                 });
             }
         }
+
+        public Action GoBack
+        {
+            get
+            {
+                return new Action(() =>
+                {
+                    NavigationService.GoBackAsync();
+                });
+            }
+        }
     }
 }

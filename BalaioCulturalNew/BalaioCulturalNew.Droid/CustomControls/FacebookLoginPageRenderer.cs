@@ -40,7 +40,7 @@ namespace BalaioCulturalNew.Droid.CustomControls
                 else
                 {
                     // The user cancelled
-
+                    (App.Current as App).GoBack.Invoke();
                 }
             };
 
