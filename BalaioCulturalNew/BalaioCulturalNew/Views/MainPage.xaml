@@ -11,8 +11,8 @@
     <MasterDetailPage.Detail>
         <NavigationPage BarBackgroundColor="#994F94" BarTextColor="White">
             <NavigationPage.ToolbarItems>
-                <ToolbarItem Text="Filtro" Order="Primary" Priority="0"></ToolbarItem>
-                <ToolbarItem Text="Busca" Order="Primary" Priority="1"></ToolbarItem>
+                <ToolbarItem Text="Filtro" Order="Primary" Priority="0" Icon="filter_icon.png"></ToolbarItem>
+                <ToolbarItem Text="Busca" Order="Primary" Priority="1" Icon="search_icon.png"></ToolbarItem>
             </NavigationPage.ToolbarItems>
             <x:Arguments>
                 <templates:MainDetailPage/>
