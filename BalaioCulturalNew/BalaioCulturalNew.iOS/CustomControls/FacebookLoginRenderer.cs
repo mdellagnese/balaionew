@@ -1,12 +1,11 @@
 ﻿using BalaioCulturalNew.iOS.CustomControls;
+using BalaioCulturalNew.Views.Login;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Auth;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(FacebookLoginRenderer), typeof(FacebookLoginRenderer))]
+[assembly: ExportRenderer(typeof(FacebookLoginPage), typeof(FacebookLoginRenderer))]
 
 namespace BalaioCulturalNew.iOS.CustomControls 
 {
@@ -37,7 +36,7 @@ namespace BalaioCulturalNew.iOS.CustomControls
                     // Use eventArgs.Account to do wonderful things
                     var userInfo = eventArgs.Account;
                     //Create facebook file
-                    AccountStore.Create().Save(eventArgs.Account, "Facebook");
+                    //AccountStore.Create().Save(eventArgs.Account, "Facebook");
                     //Navigate
                     (App.Current as App).SuccessfulLoginAction.Invoke();
                 }
@@ -47,7 +46,7 @@ namespace BalaioCulturalNew.iOS.CustomControls
                     (App.Current as App).GoBack.Invoke();
                 }
             };
-
+            done = true;
             PresentViewController(auth.GetUI(), true, null);
         }
     }
