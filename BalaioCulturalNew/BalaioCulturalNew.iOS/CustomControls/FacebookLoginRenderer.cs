@@ -1,23 +1,25 @@
-﻿using Android.App;
+﻿using BalaioCulturalNew.iOS.CustomControls;
 using System;
-using BalaioCulturalNew.Droid.CustomControls;
-using BalaioCulturalNew.Views.Login;
+using System.Collections.Generic;
+using System.Text;
 using Xamarin.Auth;
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.Android;
-using Prism.DryIoc;
-using Prism.Navigation;
-using BalaioCulturalNew.ViewModels.Login;
+using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(FacebookLoginPage), typeof(FacebookLoginPageRenderer))]
+[assembly: ExportRenderer(typeof(FacebookLoginRenderer), typeof(FacebookLoginRenderer))]
 
-namespace BalaioCulturalNew.Droid.CustomControls
+namespace BalaioCulturalNew.iOS.CustomControls 
 {
-    public class FacebookLoginPageRenderer : PageRenderer
+
+    public class FacebookLoginRenderer : PageRenderer
     {
-        public FacebookLoginPageRenderer()
+        bool done = false;
+        public override void ViewDidAppear(bool animated)
         {
-            var activity = this.Context as Activity;
+            base.ViewDidAppear(animated);
+
+            if (done)
+                return;
 
             var auth = new OAuth2Authenticator(
                     clientId: "1834003460194581",
@@ -28,24 +30,25 @@ namespace BalaioCulturalNew.Droid.CustomControls
 
             auth.Completed += (sender, eventArgs) => {
                 // We presented the UI, so it's up to us to dimiss it on iOS.
-                //DismissViewController(true, null);
+                DismissViewController(true, null);
 
                 if (eventArgs.IsAuthenticated)
                 {
                     // Use eventArgs.Account to do wonderful things
                     var userInfo = eventArgs.Account;
-
+                    //Create facebook file
+                    AccountStore.Create().Save(eventArgs.Account, "Facebook");
+                    //Navigate
                     (App.Current as App).SuccessfulLoginAction.Invoke();
                 }
                 else
                 {
                     // The user cancelled
-                    (App.Current as App).Go.Invoke();
+                    (App.Current as App).GoBack.Invoke();
                 }
             };
 
-            activity.StartActivity(auth.GetUI(activity));
+            PresentViewController(auth.GetUI(), true, null);
         }
-        
     }
 }
