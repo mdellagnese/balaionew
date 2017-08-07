@@ -42,12 +42,12 @@
                     BackgroundColor="#3b5998"/>
 
             <Label Grid.Row="2" 
-                   Text="OU POR E-MAIL  "
+                   Text="OU POR E-MAIL:"
                    TextColor="White"
                    LineBreakMode="WordWrap"
                    FontSize="Micro"
                    HorizontalOptions="CenterAndExpand"
-                   Margin="0, 5"/>
+                   />
 
             <Entry Grid.Row="3"
                    Placeholder="E-mail"
@@ -74,19 +74,14 @@
 
             <Button Grid.Row="6" 
                     Text="Enviar"   
+                    Style="{StaticResource PurpleButton}"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
-                    TextColor="White"
-                    WidthRequest="400"
-                    BackgroundColor="#994F94"
-                    BorderRadius="25"/>
+                    />
 
             <local:CustomButton Grid.Row="7" 
                     Text="Já tem uma conta? Então, entre aqui." 
-                    TextColor="White"
-                    FontSize="Micro"
-                    BackgroundColor="Transparent"
-                    BorderColor="Transparent"
+                    Style="{StaticResource WhiteBtnAsLabel}"
                     Command="{Binding NavigateToEntryPageCommand}"/>
 
     </Grid>

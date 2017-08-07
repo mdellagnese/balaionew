@@ -4,4 +4,39 @@
                         xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
                         x:Class="BalaioCulturalNew.App">
 
+  <Application.Resources>
+    <ResourceDictionary>
+      
+      <Color x:Key="Purple">#994F94</Color>
+      <x:Int32 x:Key="BtnRadius">25</x:Int32>
+      <x:Int32 x:Key="BtnWidth">400</x:Int32>
+      <x:Int32 x:Key="BtnHeight">50</x:Int32>
+
+      <Style x:Key="WhiteBtnAsLabel" TargetType="Button">
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Setter Property="BorderColor" Value="Transparent"></Setter>
+        <Setter Property="BackgroundColor" Value="Transparent"></Setter>
+        <Setter Property="FontSize" Value="Micro"></Setter>
+      </Style>
+
+      <Style x:Key="StdButton" TargetType="Button">
+        <Setter Property="BorderRadius" Value="{StaticResource BtnRadius}"></Setter>
+        <Setter Property="WidthRequest" Value="{StaticResource BtnWidth}"></Setter>
+        <Setter Property="HeightRequest" Value="{StaticResource BtnHeight}"></Setter>
+      </Style>
+
+      <Style x:Key="WhiteButton" BasedOn="{StaticResource StdButton}" TargetType="Button">
+        <Setter Property="TextColor" Value="{StaticResource Purple}"></Setter>
+        <Setter Property="BackgroundColor" Value="White"></Setter>
+      </Style>
+
+      <Style x:Key="PurpleButton" BasedOn="{StaticResource StdButton}" TargetType="Button">
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Setter Property="BackgroundColor" Value="{StaticResource Purple}"></Setter>
+      </Style>
+      
+      
+    </ResourceDictionary>
+  </Application.Resources>
+  
 </prism:PrismApplication>

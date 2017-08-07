@@ -20,14 +20,10 @@
                Margin="60,30,60,60"/>
 
         <StackLayout Grid.Row="1" Padding="30,40,30,0" Spacing="10">
-            <Button 
-                WidthRequest="400"
-                HeightRequest="50"
+            <Button
+                Style="{StaticResource WhiteButton}"
                 Text="Criar Conta" 
                 Command="{Binding NewAccountCommand}"
-                BorderRadius="25"
-                BackgroundColor="White"
-                TextColor="#994F94"
                 HorizontalOptions="CenterAndExpand"
                 />
             <Label 
@@ -36,12 +32,8 @@
                 TextColor="White" 
                 FontSize="Small"/>
             <Button 
-                WidthRequest="400"
-                HeightRequest="50"
                 Text="Entrar"
-                BorderRadius="25"
-                BackgroundColor="#994F94"
-                TextColor="White"
+                Style="{StaticResource PurpleButton}"
                 HorizontalOptions="CenterAndExpand"
                 Command="{Binding NavigateToEntryPageCommand}"/>
         </StackLayout>

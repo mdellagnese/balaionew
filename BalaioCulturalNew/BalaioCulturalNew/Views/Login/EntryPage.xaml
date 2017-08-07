@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:local="clr-namespace:BalaioCulturalNew.CustomControls;assembly=BalaioCulturalNew"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Login.EntryPage"
              NavigationPage.HasNavigationBar="False"
@@ -10,48 +11,48 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="55"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="130"/>
-            <RowDefinition Height="55"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
         <Image Grid.Row="0" Source="font_logo.png" Aspect="AspectFit" WidthRequest="150" Margin="60,10,60,0" ></Image>
 
         <Button Grid.Row="1" 
                 Text="ENTRE COM O FACEBOOK"
-                WidthRequest="400"
-                HeightRequest="55"
+                Style="{StaticResource StdButton}"
                 Margin="30,0"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 TextColor="White"
                 BackgroundColor="#3b5998"
-                BorderRadius="25"
                 Command="{Binding FacebookLoginCommand}"
                 />
 
-        <Label Grid.Row="2" Text="OU" TextColor="White" HorizontalOptions="Center"/>
+        <Label Grid.Row="2" Text="OU" TextColor="White" HorizontalOptions="Center" FontSize="Small"/>
 
-        <StackLayout Grid.Row="3" 
-                     Margin="30,0,30,10" 
-                     VerticalOptions="FillAndExpand"
-                     Padding="20,0"
-                     Spacing="5">
-            <Entry BackgroundColor="Transparent" 
-                   Placeholder="Usuário ou e-mail" 
-                   PlaceholderColor="White"
-                   />
-            <Entry BackgroundColor="Transparent" 
-                   Placeholder="Senha" 
-                   IsPassword="True" 
-                   PlaceholderColor="White"
-                   />
-        </StackLayout>
+        
+        <Entry Grid.Row="3"  BackgroundColor="Transparent" 
+                Placeholder="Usuário ou e-mail" 
+                PlaceholderColor="White"
+                TextColor="White"
+               Margin="30,0"
+                />
+        <Entry Grid.Row="4" 
+               BackgroundColor="Transparent" 
+                Placeholder="Senha" 
+                IsPassword="True"
+                TextColor="White"
+                PlaceholderColor="White"
+               Margin="30,0"
+                />
+        
 
-        <Button Grid.Row="4" 
+        <Button Grid.Row="5" 
                 Text="ENTRAR"
                 Margin="30,0,30,0"
                 VerticalOptions="Center"
@@ -63,13 +64,23 @@
                 BorderRadius="25"
                 Command="{Binding NavigateToMainMenuCommand}"/>
 
-        <Label Grid.Row="5" Text="Esqueceu seus dados?" TextColor="White" HorizontalOptions="Center" Margin="10" FontSize="Small"/>
-        
-        <StackLayout Grid.Row="6" Orientation="Horizontal" HorizontalOptions="Center">
-            <Label Text="Ainda não tem uma conta?" TextColor="White" HorizontalOptions="Center" FontSize="Small"/>
-            <Label Text="Cadastre-se!" TextColor="White" FontAttributes="Bold" FontSize="Small"/>
-        </StackLayout>
-        
+        <local:CustomButton Grid.Row="6" 
+                            HorizontalOptions="Center"
+                            Text="Esqueceu seus dados?"
+                            Style="{StaticResource WhiteBtnAsLabel}"
+                            VerticalOptions="Center"
+                            Command="{Binding NavigateToForgotPageCommand}"/>
+
+        <local:CustomButton Grid.Row="7" 
+                            HorizontalOptions="Center"
+                            Text="Ainda não tem uma conta? Cadastre-se"
+                            VerticalOptions="StartAndExpand"
+                            Style="{StaticResource WhiteBtnAsLabel}"
+                            Command="{Binding NavigateToRegisterPageCommand}"
+                            />
+
+
+
     </Grid>
   
 </ContentPage>
