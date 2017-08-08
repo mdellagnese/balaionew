@@ -9,6 +9,8 @@ using Android.OS;
 using DryIoc;
 using Prism.DryIoc;
 using Prism.Navigation;
+using Android.Accounts;
+using Xamarin.Auth;
 
 namespace BalaioCulturalNew.Droid
 {
@@ -27,6 +29,7 @@ namespace BalaioCulturalNew.Droid
             //Status bar color
             Window.SetStatusBarColor(Android.Graphics.Color.Rgb(153, 79, 148));
         }
+        
     }
 
     public class AndroidInitializer : IPlatformInitializer
@@ -36,5 +39,7 @@ namespace BalaioCulturalNew.Droid
             
         }
     }
+
+
 }
 

@@ -52,6 +52,9 @@ namespace BalaioCulturalNew
 
         protected override void RegisterTypes()
         {
+            //Interfaces
+            
+
             Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<LoginPage, LoginPageViewModel>();
             Container.RegisterTypeForNavigation<RegisterPage, RegisterPageViewModel>();
@@ -85,5 +88,6 @@ namespace BalaioCulturalNew
                 });
             }
         }
+
     }
 }

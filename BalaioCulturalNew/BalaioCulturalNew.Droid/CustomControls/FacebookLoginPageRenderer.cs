@@ -8,6 +8,7 @@ using Xamarin.Forms.Platform.Android;
 using Prism.DryIoc;
 using Prism.Navigation;
 using BalaioCulturalNew.ViewModels.Login;
+using Newtonsoft.Json.Linq;
 
 [assembly: ExportRenderer(typeof(FacebookLoginPage), typeof(FacebookLoginPageRenderer))]
 
@@ -21,12 +22,13 @@ namespace BalaioCulturalNew.Droid.CustomControls
 
             var auth = new OAuth2Authenticator(
                     clientId: "1834003460194581",
-                    scope: "",
+                    scope: "+public_profile",
                     authorizeUrl: new Uri("https://m.facebook.com/dialog/oauth/"),
                     redirectUrl: new Uri("http://www.facebook.com/connect/login_success.html")
                 );
 
-            auth.Completed += (sender, eventArgs) => {
+            auth.Completed += (sender, eventArgs) =>
+            {
                 // We presented the UI, so it's up to us to dimiss it on iOS.
                 //DismissViewController(true, null);
 
@@ -34,8 +36,9 @@ namespace BalaioCulturalNew.Droid.CustomControls
                 {
                     // Use eventArgs.Account to do wonderful things
                     var userInfo = eventArgs.Account;
-
-                    (App.Current as App).SuccessfulLoginAction.Invoke();
+                    var accessToken = userInfo.Properties["access_token"];
+                    
+                    (App.Current as App).SuccessfulLoginAction();
                 }
                 else
                 {

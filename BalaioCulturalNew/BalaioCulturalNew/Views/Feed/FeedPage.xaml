@@ -17,6 +17,7 @@
         <ListView ItemsSource="{Binding Events}"
                   SeparatorVisibility="None"
                   HasUnevenRows="True"
+                  CachingStrategy="RecycleElement"
                   BackgroundColor="Transparent"
                   RowHeight="300"
                   Header="">
