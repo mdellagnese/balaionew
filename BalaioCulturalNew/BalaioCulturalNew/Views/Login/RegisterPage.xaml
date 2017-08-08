@@ -39,7 +39,8 @@
                     HorizontalOptions="Center"
                     TextColor="White"
                     WidthRequest="400"
-                    BackgroundColor="#3b5998"/>
+                    BackgroundColor="#3b5998"
+                    Command="{Binding FacebookRegisterCommand}"/>
 
             <Label Grid.Row="2" 
                    Text="OU POR E-MAIL:"

@@ -26,7 +26,7 @@ namespace BalaioCulturalNew
             TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
 
             //Se não tiver usuario logado
-            if (true) {
+            if (!Properties.ContainsKey("fb_access_token")) {
                 NavigationService.NavigateAsync("app:///NavigationPage/LoginPage", null, true);
             }
             else
@@ -72,7 +72,7 @@ namespace BalaioCulturalNew
             {
                 return new Action(() =>
                 {
-                    NavigationService.GoBackAsync();
+                    //NavigationService.GoBackAsync();
                     NavigationService.NavigateAsync("app:///MainPage");
                 });
             }
@@ -88,6 +88,6 @@ namespace BalaioCulturalNew
                 });
             }
         }
-
+        
     }
 }
