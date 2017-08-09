@@ -1,4 +1,5 @@
 ﻿using Prism.Commands;
+using Prism.Events;
 using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
@@ -12,6 +13,25 @@ namespace BalaioCulturalNew.ViewModels
     {
         protected INavigationService _navigationService;
         protected IPageDialogService _pageDialogService;
+        protected IEventAggregator _eventAggregator;
+        
+        public BaseViewModel(INavigationService navigationService, IPageDialogService pageDialogService, IEventAggregator eventAggregator)
+        {
+            _navigationService = navigationService;
+            _pageDialogService = pageDialogService;
+            _eventAggregator = eventAggregator;
+        }
+
+        public BaseViewModel(INavigationService navigationService)
+        {
+            _navigationService = navigationService;
+        }
+
+        public BaseViewModel(INavigationService navigationService, IEventAggregator eventAggregator)
+        {
+            _navigationService = navigationService;
+            _eventAggregator = eventAggregator;
+        }
 
         public BaseViewModel(INavigationService navigationService, IPageDialogService pageDialogService)
         {
@@ -19,9 +39,9 @@ namespace BalaioCulturalNew.ViewModels
             _pageDialogService = pageDialogService;
         }
 
-        public BaseViewModel(INavigationService navigationService)
+        public BaseViewModel(IEventAggregator eventAggregator)
         {
-            _navigationService = navigationService;
+            _eventAggregator = eventAggregator;
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)

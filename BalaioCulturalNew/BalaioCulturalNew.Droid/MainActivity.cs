@@ -11,12 +11,17 @@ using Prism.DryIoc;
 using Prism.Navigation;
 using Android.Accounts;
 using Xamarin.Auth;
+using Prism.Events;
+using BalaioCulturalNew.ViewModels.Login;
 
 namespace BalaioCulturalNew.Droid
 {
     [Activity(Label = "Balaio Cultural", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        protected IEventAggregator _eventAggregator;
+        public bool NeedRegistration = false;
+
         protected override void OnCreate(Bundle bundle)
         {
             TabLayoutResource = Resource.Layout.tabs;
@@ -25,11 +30,25 @@ namespace BalaioCulturalNew.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App(new AndroidInitializer()));
+
+            var application = new App(new AndroidInitializer());
+            _eventAggregator = application.Container.Resolve<IEventAggregator>();
+
+            if(_eventAggregator != null)
+            {
+                _eventAggregator.GetEvent<NavigateToFacebookEvent>().Subscribe(OnNavigatingToFacebook);
+            }
+
+
+            LoadApplication(application);
             //Status bar color
             Window.SetStatusBarColor(Android.Graphics.Color.Rgb(153, 79, 148));
         }
-        
+
+        private void OnNavigatingToFacebook(bool obj)
+        {
+            NeedRegistration = obj;
+        }
     }
 
     public class AndroidInitializer : IPlatformInitializer

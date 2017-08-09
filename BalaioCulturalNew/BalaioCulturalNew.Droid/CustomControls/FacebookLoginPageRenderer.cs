@@ -9,6 +9,7 @@ using Prism.DryIoc;
 using Prism.Navigation;
 using BalaioCulturalNew.ViewModels.Login;
 using Newtonsoft.Json.Linq;
+using Prism.Events;
 
 [assembly: ExportRenderer(typeof(FacebookLoginPage), typeof(FacebookLoginPageRenderer))]
 
@@ -39,12 +40,6 @@ namespace BalaioCulturalNew.Droid.CustomControls
                     var accessToken = userInfo.Properties["access_token"];
 
                     //Save the API Token - We need a new request to Balio API to get the token
-                    var viewModel = App.Current.MainPage.BindingContext as FacebookLoginPageViewModel;
-                    if (viewModel.NeedRegistration == true)
-                    {
-                        Console.WriteLine("Preciso Registrar");
-                    }
-
                     App.Current.Properties["fb_access_token"] = accessToken;
                     
                     //Navigate

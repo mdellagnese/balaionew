@@ -1,6 +1,8 @@
 ﻿using Prism.Commands;
+using Prism.Events;
 using Prism.Mvvm;
 using Prism.Navigation;
+using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,9 +14,9 @@ namespace BalaioCulturalNew.ViewModels.Login
     {
         public bool NeedRegistration { get; set; }
 
-        public FacebookLoginPageViewModel(INavigationService navigationService) : base(navigationService)
+        public FacebookLoginPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService, IEventAggregator eventAggregator) : base(navigationService, pageDialogService, eventAggregator)
         {
-            
+                
         }
 
         public void OnNavigatedTo(NavigationParameters parameters)
@@ -22,6 +24,7 @@ namespace BalaioCulturalNew.ViewModels.Login
             if(parameters.ContainsKey("NeedRegistration"))
             {
                 NeedRegistration = (bool)parameters["NeedRegistration"];
+                _eventAggregator.GetEvent<NavigateToFacebookEvent>().Publish(true);
             }    
         }
         

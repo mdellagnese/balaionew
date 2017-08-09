@@ -45,6 +45,7 @@
     <Compile Include="ViewModels\Feed\FeedPageViewModel.cs" />
     <Compile Include="ViewModels\Login\EntryPageViewModel.cs" />
     <Compile Include="ViewModels\Login\LoginPageViewModel.cs" />
+    <Compile Include="ViewModels\Login\NavigateToFacebookEvent.cs" />
     <Compile Include="ViewModels\Templates\MainDetailPageViewModel.cs" />
     <Compile Include="ViewModels\Templates\MainMenuPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />

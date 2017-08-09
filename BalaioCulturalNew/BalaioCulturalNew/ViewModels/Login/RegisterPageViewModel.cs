@@ -15,7 +15,6 @@ namespace BalaioCulturalNew.ViewModels.Login
         public RegisterPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             NavigateToEntryPageCommand = new DelegateCommand(() => _navigationService.GoBackAsync());
-
             FacebookRegisterCommand = new DelegateCommand(FacebookRegister);
         }
 
