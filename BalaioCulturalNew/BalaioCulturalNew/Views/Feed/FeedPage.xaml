@@ -4,6 +4,7 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
              xmlns:converters="clr-namespace:Prism.Converters;assembly=Prism.Forms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Feed.FeedPage"
              Padding="10, 20">
@@ -20,7 +21,8 @@
                   CachingStrategy="RecycleElement"
                   BackgroundColor="Transparent"
                   RowHeight="300"
-                  Header="">
+                  Header=""
+                  >
             <!--<ListView.Behaviors>
                 <behaviors:EventToCommandBehavior EventName="ItemTapped" Command="{Binding ItemTappedCommand}">
                     
@@ -50,11 +52,11 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid RowSpacing="20" ColumnSpacing="0">
+                        <Grid ColumnSpacing="0" RowSpacing="0" Padding="0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="50"></RowDefinition>
                                 <RowDefinition Height="100"></RowDefinition>
-                                <RowDefinition Height="50"></RowDefinition>
+                                <RowDefinition Height="40"></RowDefinition>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50"></ColumnDefinition>
@@ -62,18 +64,21 @@
                                 <ColumnDefinition Width="100"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
                             
-                            <Image 
+                            <!--Imagem de plano de fundo-->
+                            <ffimageloading:CachedImage
+                                Grid.RowSpan="2" 
+                                Grid.ColumnSpan="3"
                                 Source="http://lorempixel.com/output/people-q-c-640-480-9.jpg"
                                 HeightRequest="200" 
-                                Aspect="AspectFill" 
-                                Grid.RowSpan="2" 
-                                Grid.ColumnSpan="3"></Image>
-
+                                Aspect="AspectFill"
+                                />
+                            <!--Título da categoria-->
                             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
                                    Text="BALADAS E FESTAS" 
                                    TextColor="White"
                                    FontSize="Micro"
-                                   Margin="5"/>
+                                   Margin="5"
+                                   />
                             <BoxView 
                                 Grid.Row="0" Grid.Column="0"
                                 HeightRequest="2"
@@ -81,17 +86,76 @@
                                 Color="#C8B31B"
                                 VerticalOptions="Center"
                                 Margin="5,0"/>
-                            
-                            <Label BackgroundColor="Transparent" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                            <!--Descrição do evento-->
+                            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
                                    Text="Desce Neon Baile: Muita luz negra, make neon e combo duplo até 00h" 
                                    TextColor="White"
                                    FontSize="Small"
                                    FontAttributes="Bold"
-                                   Margin="5"/>
+                                   Margin="5,0"
+                                   />
 
-                            <Label HeightRequest="50" VerticalTextAlignment="Center" BackgroundColor="Beige" Grid.Row="2" Grid.Column="0" Text="22h" TextColor="Black"></Label>
-                            <Label HeightRequest="50" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="1" Text="Sinners" TextColor="Black"></Label>
-                            <Label HeightRequest="50" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="2" Text="---" TextColor="Black" HorizontalTextAlignment="End"></Label>
+
+                            <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" 
+                                  Padding="0"
+                                  Margin="0"
+                                  >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="60"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <ffimageloading:CachedImage 
+                                    Grid.Column="0"
+                                    Source="icon_clock.png"
+                                    VerticalOptions="Center"
+                                    HeightRequest="20"
+                                />
+                                <Label 
+                                    Grid.Column="1"
+                                    Text="22h - 00h"
+                                    VerticalOptions="Center"
+                                    TextColor="Black"/>
+                                   
+                                <ffimageloading:CachedImage
+                                    Grid.Column="2"
+                                    Source="icon_localiz.png"
+                                    VerticalOptions="Center"
+                                    HeightRequest="20"
+                                    />
+                                <Label Grid.Column="3"
+                                    Text="Sinners" 
+                                    VerticalOptions="Center"
+                                    TextColor="Black"/>
+
+                                <StackLayout Orientation="Horizontal" 
+                                             Grid.Column="4"
+                                             HorizontalOptions="EndAndExpand"
+                                             VerticalOptions="Center"
+                                             Margin="5,0"
+                                             Spacing="10"
+                                             >
+                                    <ffimageloading:CachedImage
+                                        Source="ticket_free_grey.png"
+                                        HeightRequest="20"
+                                        />
+                                    <ffimageloading:CachedImage
+                                        Source="sun_icon_grey.png"
+                                        HeightRequest="20"
+                                        />
+                                    <ffimageloading:CachedImage
+                                        Source="moon_icon_grey.png"
+                                        HeightRequest="20"
+                                        />
+                                </StackLayout>
+                                
+                            </Grid>
 
                         </Grid>
                     </ViewCell>
