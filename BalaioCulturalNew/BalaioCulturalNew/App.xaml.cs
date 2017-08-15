@@ -64,6 +64,7 @@ namespace BalaioCulturalNew
             Container.RegisterTypeForNavigation<MainDetailPage, MainDetailPageViewModel>();
             Container.RegisterTypeForNavigation<FeedPage, FeedPageViewModel>();
             Container.RegisterTypeForNavigation<FacebookLoginPage, FacebookLoginPageViewModel>();
+            Container.RegisterTypeForNavigation<EventDetailPage>();
         }
 
         public Action SuccessfulLoginAction

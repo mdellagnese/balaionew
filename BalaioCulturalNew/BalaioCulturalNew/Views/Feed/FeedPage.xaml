@@ -3,16 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
-             xmlns:converters="clr-namespace:Prism.Converters;assembly=Prism.Forms"
+             xmlns:converters="clr-namespace:BalaioCulturalNew.Converters"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Feed.FeedPage"
              Padding="10, 20">
-    <!--<ContentPage.Resources>
+    <ContentPage.Resources>
         <ResourceDictionary>
             <converters:ItemTappedEventArgsConverter x:Key="itemTappedEventArgsConverter" />
         </ResourceDictionary>
-    </ContentPage.Resources>-->
+    </ContentPage.Resources>
     
     <StackLayout>
         <ListView ItemsSource="{Binding Events}"
@@ -24,9 +24,13 @@
                   Header=""
                   >
             <ListView.Behaviors>
-                <behaviors:EventToCommandBehavior EventName="ItemTapped" Command="{Binding EventSelectedCommand}">
-                    
-                </behaviors:EventToCommandBehavior>
+                <behaviors:EventToCommandBehavior 
+                    EventName="ItemTapped" 
+                    Command="{Binding EventSelectedCommand}"
+                    EventArgsConverter="{StaticResource itemTappedEventArgsConverter}" 
+                    EventArgsParameterPath="Item"/>
+
+
             </ListView.Behaviors>
             <ListView.HeaderTemplate>
                 <DataTemplate>

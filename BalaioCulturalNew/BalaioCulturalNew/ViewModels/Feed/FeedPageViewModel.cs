@@ -11,18 +11,19 @@ namespace BalaioCulturalNew.ViewModels.Feed
 {
     public class FeedPageViewModel : BaseViewModel
     {
-        public DelegateCommand EventSelectedCommand { get; private set; }
+        public DelegateCommand<string> EventSelectedCommand { get; private set; }
 
         public FeedPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             Events = new ObservableCollection<string> { "Teste", "Teste 2", "Teste 2" };
-            EventSelectedCommand = new DelegateCommand(SelectEvent);
-        }
+            EventSelectedCommand = new DelegateCommand<string>((selectedEvent) => {
+                var parameters = new NavigationParameters();
+                parameters.Add("Title", selectedEvent);
 
-        private void SelectEvent()
-        {
-            Debug.WriteLine("Evento Selecionado");
+                navigationService.NavigateAsync("EventDetailPage", parameters, false);
+            });
         }
+        
 
         private ObservableCollection<String> _events;
 
