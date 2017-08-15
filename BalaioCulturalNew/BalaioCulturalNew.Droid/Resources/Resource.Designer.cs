@@ -2236,17 +2236,20 @@ namespace BalaioCulturalNew.Droid
 			// aapt resource value: 0x7f0200a8
 			public const int mr_ic_play_light = 2130837672;
 			
-			// aapt resource value: 0x7f0200ac
-			public const int notification_template_icon_bg = 2130837676;
+			// aapt resource value: 0x7f0200ad
+			public const int notification_template_icon_bg = 2130837677;
 			
 			// aapt resource value: 0x7f0200a9
 			public const int search_icon = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int sun_icon_grey = 2130837674;
+			public const int splash = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ticket_free_grey = 2130837675;
+			public const int sun_icon_grey = 2130837675;
+			
+			// aapt resource value: 0x7f0200ac
+			public const int ticket_free_grey = 2130837676;
 			
 			static Drawable()
 			{
@@ -3570,6 +3573,9 @@ namespace BalaioCulturalNew.Droid
 			
 			// aapt resource value: 0x7f0a0173
 			public const int MyTheme_Base = 2131362163;
+			
+			// aapt resource value: 0x7f0a0174
+			public const int MyTheme_Splash = 2131362164;
 			
 			// aapt resource value: 0x7f0a0032
 			public const int Platform_AppCompat = 2131361842;

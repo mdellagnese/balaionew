@@ -16,7 +16,7 @@ using BalaioCulturalNew.ViewModels.Login;
 
 namespace BalaioCulturalNew.Droid
 {
-    [Activity(Label = "Balaio Cultural", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Balaio Cultural", Theme = "@style/MyTheme", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected IEventAggregator _eventAggregator;
