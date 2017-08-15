@@ -23,11 +23,11 @@
                   RowHeight="300"
                   Header=""
                   >
-            <!--<ListView.Behaviors>
-                <behaviors:EventToCommandBehavior EventName="ItemTapped" Command="{Binding ItemTappedCommand}">
+            <ListView.Behaviors>
+                <behaviors:EventToCommandBehavior EventName="ItemTapped" Command="{Binding EventSelectedCommand}">
                     
                 </behaviors:EventToCommandBehavior>
-            </ListView.Behaviors>-->
+            </ListView.Behaviors>
             <ListView.HeaderTemplate>
                 <DataTemplate>
                     <Grid RowSpacing="0">
