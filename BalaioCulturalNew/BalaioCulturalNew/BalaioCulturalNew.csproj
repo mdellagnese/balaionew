@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="Converters\ItemTappedEventArgsConverter.cs" />
     <Compile Include="CustomControls\CustomButton.cs" />
+    <Compile Include="Effects\ViewEffects.cs" />
     <Compile Include="Helpers\ICustomSettings.cs" />
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

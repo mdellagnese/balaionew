@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:effects="clr-namespace:BalaioCulturalNew.Effects"
              xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
              xmlns:converters="clr-namespace:BalaioCulturalNew.Converters"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
@@ -29,9 +30,8 @@
                     Command="{Binding EventSelectedCommand}"
                     EventArgsConverter="{StaticResource itemTappedEventArgsConverter}" 
                     EventArgsParameterPath="Item"/>
-
-
             </ListView.Behaviors>
+
             <ListView.HeaderTemplate>
                 <DataTemplate>
                     <Grid RowSpacing="0">
@@ -53,10 +53,14 @@
                     
                 </DataTemplate>
             </ListView.HeaderTemplate>
+            
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid ColumnSpacing="0" RowSpacing="0" Padding="0">
+                        <Grid ColumnSpacing="0" RowSpacing="0" Padding="0, 0, 0, 25" 
+                              effects:ViewEffects.HasShadow="True"
+                              effects:ViewEffects.ShadowColor="Black"
+                              effects:ViewEffects.ShadowSize="5">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="50"></RowDefinition>
                                 <RowDefinition Height="100"></RowDefinition>
