@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             xmlns:local="clr-namespace:BalaioCulturalNew.CustomControls;assembly=BalaioCulturalNew"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Login.RegisterPage"
              BackgroundImage="bg2.png"
@@ -32,8 +32,8 @@
                    HorizontalTextAlignment="Center"
                    VerticalOptions="Center"
                    />
-            
-            <Button Grid.Row="1" 
+
+            <controls:ExtendedButton Grid.Row="1" 
                     Text="CADASTRE-SE COM O FACEBOOK"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
@@ -51,14 +51,14 @@
                    />
 
             <Entry Grid.Row="3"
-                   Placeholder="E-mail"
+                   Placeholder="Usuário"
                    TextColor="White"
                    FontSize="Medium"
                    BackgroundColor="Transparent"
                    PlaceholderColor="White"/>
 
             <Entry Grid.Row="4"
-                   Placeholder="Senha"
+                   Placeholder="E-mail"
                    IsPassword="True"
                    TextColor="White"
                    FontSize="Medium"
@@ -66,21 +66,21 @@
                    PlaceholderColor="White"/>
 
             <Entry Grid.Row="5"
-                   Placeholder="Repita a senha"
+                   Placeholder="Senha"
                    IsPassword="True"
                    TextColor="White"
                    FontSize="Medium"
                    BackgroundColor="Transparent"
                    PlaceholderColor="White"/>
 
-            <Button Grid.Row="6" 
+            <controls:ExtendedButton Grid.Row="6" 
                     Text="Enviar"   
                     Style="{StaticResource PurpleButton}"
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     />
 
-            <local:CustomButton Grid.Row="7" 
+            <controls:ExtendedButton Grid.Row="7" 
                     Text="Já tem uma conta? Então, entre aqui." 
                     Style="{StaticResource WhiteBtnAsLabel}"
                     Command="{Binding NavigateToEntryPageCommand}"/>

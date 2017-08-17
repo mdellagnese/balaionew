@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Login.LoginPage"
@@ -22,7 +23,7 @@
             Margin="60,30,60,60"/>
 
         <StackLayout Grid.Row="1" Padding="30,40,30,0" Spacing="10">
-            <Button
+            <controls:ExtendedButton
                 Style="{StaticResource WhiteButton}"
                 Text="Criar Conta" 
                 Command="{Binding NewAccountCommand}"
@@ -33,7 +34,7 @@
                 HorizontalOptions="Center" 
                 TextColor="White" 
                 FontSize="Small"/>
-            <Button 
+            <controls:ExtendedButton 
                 Text="Entrar"
                 Style="{StaticResource PurpleButton}"
                 HorizontalOptions="CenterAndExpand"

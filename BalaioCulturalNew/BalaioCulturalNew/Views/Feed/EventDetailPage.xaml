@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             xmlns:controls="clr-namespace:BalaioCulturalNew.CustomControls;assembly=BalaioCulturalNew"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Feed.EventDetailPage"
@@ -163,12 +163,12 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <controls:CustomButton
-                    Image="route_icon.png" BackgroundColor="Transparent"></controls:CustomButton>
-                <controls:CustomButton Grid.Column="1"
-                    Image="ticket_icon.png" BackgroundColor="Transparent"></controls:CustomButton>
-                <controls:CustomButton Grid.Column="2"
-                    Image="share_icon.png" BackgroundColor="Transparent"></controls:CustomButton>
+                <controls:ExtendedButton
+                    Image="route_icon.png" BackgroundColor="Transparent"></controls:ExtendedButton>
+                <controls:ExtendedButton Grid.Column="1"
+                    Image="ticket_icon.png" BackgroundColor="Transparent"></controls:ExtendedButton>
+                <controls:ExtendedButton Grid.Column="2"
+                    Image="share_icon.png" BackgroundColor="Transparent"></controls:ExtendedButton>
             </Grid>
             
         </StackLayout>

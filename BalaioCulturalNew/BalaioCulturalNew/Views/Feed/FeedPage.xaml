@@ -57,7 +57,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid ColumnSpacing="0" RowSpacing="0" Padding="0, 0, 0, 25" 
+                        <Grid ColumnSpacing="0" RowSpacing="0" Margin="0,10" 
                               effects:ViewEffects.HasShadow="True"
                               effects:ViewEffects.ShadowColor="Black"
                               effects:ViewEffects.ShadowSize="5">

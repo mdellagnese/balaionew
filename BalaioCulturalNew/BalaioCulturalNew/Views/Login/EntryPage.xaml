@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             xmlns:local="clr-namespace:BalaioCulturalNew.CustomControls;assembly=BalaioCulturalNew"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Login.EntryPage"
@@ -30,7 +30,7 @@
             Margin="60,10,60,0"
             />
 
-        <Button Grid.Row="1" 
+        <controls:ExtendedButton Grid.Row="1" 
                 Text="ENTRE COM O FACEBOOK"
                 Style="{StaticResource StdButton}"
                 Margin="30,0"
@@ -58,9 +58,9 @@
                 PlaceholderColor="White"
                Margin="30,0"
                 />
-        
 
-        <Button Grid.Row="5" 
+
+        <controls:ExtendedButton Grid.Row="5" 
                 Text="ENTRAR"
                 Margin="30,0,30,0"
                 VerticalOptions="Center"
@@ -72,14 +72,14 @@
                 BorderRadius="25"
                 Command="{Binding NavigateToMainMenuCommand}"/>
 
-        <local:CustomButton Grid.Row="6" 
+        <controls:ExtendedButton Grid.Row="6" 
                             HorizontalOptions="Center"
                             Text="Esqueceu seus dados?"
                             Style="{StaticResource WhiteBtnAsLabel}"
                             VerticalOptions="Center"
                             Command="{Binding NavigateToForgotPageCommand}"/>
 
-        <local:CustomButton Grid.Row="7" 
+        <controls:ExtendedButton Grid.Row="7" 
                             HorizontalOptions="Center"
                             Text="Ainda não tem uma conta? Cadastre-se"
                             VerticalOptions="StartAndExpand"

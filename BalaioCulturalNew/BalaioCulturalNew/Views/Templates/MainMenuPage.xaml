@@ -2,11 +2,61 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             xmlns:circle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Templates.MainMenuPage"
-             Padding="0, 20, 0, 0">
-    <StackLayout Padding=" 10">
-        <Button Text="Opção 1"></Button>
-        <Button Text="Opção 2"></Button>
+             Padding="0,20,0,0"
+             BackgroundColor="White">
+    <StackLayout Spacing="0">
+        <Grid HeightRequest="150" Padding="0" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <ffimageloading:CachedImage Grid.ColumnSpan="3" Grid.RowSpan="3"
+                                        Source="bg_perfil.png" Margin="0"
+                                        Aspect="AspectFill"></ffimageloading:CachedImage>
+
+            <Label Grid.ColumnSpan="3"
+                   VerticalOptions="End"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Large"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   Text="Miguel Costa"/>
+
+            <circle:CircleImage Grid.Row="1" Grid.Column="1"
+                                HeightRequest="60" WidthRequest="60"
+                                VerticalOptions="End"
+                                Source="user_perfil.png"/>
+
+        </Grid>
+        <!--Menus-->
+        <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
+                    Text="Editar Perfil"
+                    HorizontalContentAlignment="Start"/>
+        <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
+                    Text="Alterar Localização"
+                    HorizontalContentAlignment="Start"/>
+        <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
+                    Text="Contato"
+                    HorizontalContentAlignment="Start"/>
+        <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
+                    Text="Quero Anunciar"
+                    HorizontalContentAlignment="Start"/>
+        <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
+                    Text="Política e Privacidade"
+                    HorizontalContentAlignment="Start"/>
     </StackLayout>
 </ContentPage>
