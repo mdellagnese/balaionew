@@ -21,7 +21,6 @@
       </Style>
 
       <Style x:Key="StdButton" TargetType="Button">
-        <Setter Property="BorderRadius" Value="{StaticResource BtnRadius}"></Setter>
         <Setter Property="WidthRequest" Value="{StaticResource BtnWidth}"></Setter>
         <Setter Property="HeightRequest" Value="{StaticResource BtnHeight}"></Setter>
       </Style>
@@ -29,18 +28,19 @@
       <Style x:Key="WhiteButton" BasedOn="{StaticResource StdButton}" TargetType="Button">
         <Setter Property="TextColor" Value="{StaticResource Purple}"></Setter>
         <Setter Property="BackgroundColor" Value="White"></Setter>
-      </Style>
-
-      <Style x:Key="MainMenuButton" BasedOn="{StaticResource StdButton}" TargetType="Button">
-        <Setter Property="TextColor" Value="{StaticResource Purple}"></Setter>
-        <Setter Property="BackgroundColor" Value="White"></Setter>
+        <Setter Property="BorderRadius" Value="{StaticResource BtnRadius}"></Setter>
       </Style>
 
       <Style x:Key="PurpleButton" BasedOn="{StaticResource StdButton}" TargetType="Button">
         <Setter Property="TextColor" Value="White"></Setter>
         <Setter Property="BackgroundColor" Value="{StaticResource Purple}"></Setter>
+        <Setter Property="BorderRadius" Value="{StaticResource BtnRadius}"></Setter>
       </Style>
       
+      <Style x:Key="MainMenuButton" BasedOn="{StaticResource StdButton}" TargetType="Button">
+        <Setter Property="TextColor" Value="{StaticResource Purple}"></Setter>
+        <Setter Property="BackgroundColor" Value="White"></Setter>
+      </Style>
       
     </ResourceDictionary>
   </Application.Resources>

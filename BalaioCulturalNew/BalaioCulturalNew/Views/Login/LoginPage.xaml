@@ -33,7 +33,7 @@
                 Text="OU"
                 HorizontalOptions="Center" 
                 TextColor="White" 
-                FontSize="Small"/>
+                FontSize="Micro"/>
             <controls:ExtendedButton 
                 Text="Entrar"
                 Style="{StaticResource PurpleButton}"

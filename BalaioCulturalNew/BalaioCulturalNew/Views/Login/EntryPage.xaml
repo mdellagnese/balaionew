@@ -41,7 +41,12 @@
                 Command="{Binding FacebookLoginCommand}"
                 />
 
-        <Label Grid.Row="2" Text="OU" TextColor="White" HorizontalOptions="Center" FontSize="Small"/>
+        <Label Grid.Row="2" 
+               Text="OU" 
+               TextColor="White" 
+               HorizontalOptions="CenterAndExpand" 
+               VerticalOptions="Center"
+               FontSize="Micro"/>
 
         
         <Entry Grid.Row="3"  BackgroundColor="Transparent" 

@@ -47,6 +47,7 @@
                    TextColor="White"
                    LineBreakMode="WordWrap"
                    FontSize="Micro"
+                   VerticalOptions="Center"
                    HorizontalOptions="CenterAndExpand"
                    />
 
