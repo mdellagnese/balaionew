@@ -37,6 +37,14 @@ namespace BalaioCulturalNew.Droid.CustomControls
                 {
                     // Use eventArgs.Account to do wonderful things
                     var userInfo = eventArgs.Account;
+
+                    if(MainActivity.NeedRegistration == true)
+                    {
+                        //Get facebook Information
+
+                    }
+
+
                     var accessToken = userInfo.Properties["access_token"];
 
                     //Save the API Token - We need a new request to Balio API to get the token

@@ -20,7 +20,7 @@ namespace BalaioCulturalNew.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected IEventAggregator _eventAggregator;
-        public bool NeedRegistration = false;
+        public static bool NeedRegistration = false;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -38,8 +38,7 @@ namespace BalaioCulturalNew.Droid
             {
                 _eventAggregator.GetEvent<NavigateToFacebookEvent>().Subscribe(OnNavigatingToFacebook);
             }
-
-
+            
             LoadApplication(application);
             //Status bar color
             Window.SetStatusBarColor(Android.Graphics.Color.Rgb(153, 79, 148));
