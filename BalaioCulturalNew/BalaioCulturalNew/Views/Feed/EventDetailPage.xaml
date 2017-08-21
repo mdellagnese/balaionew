@@ -28,7 +28,6 @@
                                 Grid.RowSpan="2" 
                                 Grid.ColumnSpan="3"
                                 Source="http://lorempixel.com/output/people-q-c-640-480-9.jpg"
-                                HeightRequest="200" 
                                 Aspect="AspectFill"
                                 />
                 <!--Título da categoria-->
@@ -53,7 +52,6 @@
                                    FontAttributes="Bold"
                                    Margin="5,0"
                                    />
-
 
                 <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" 
                                   Padding="0"
