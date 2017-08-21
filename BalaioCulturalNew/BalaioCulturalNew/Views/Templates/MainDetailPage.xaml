@@ -5,7 +5,8 @@
             xmlns:feed="clr-namespace:BalaioCulturalNew.Views.Feed"
             prism:ViewModelLocator.AutowireViewModel="True"
             x:Class="BalaioCulturalNew.Views.Templates.MainDetailPage"
-            BarBackgroundColor="#994F94">
+            BarBackgroundColor="#994F94"
+            Title="Balaio Cultural">
     <feed:FeedPage Title="Feed"></feed:FeedPage>
     <ContentPage Title="Meu Balaio"></ContentPage>
     <ContentPage Title="Locais"></ContentPage>
