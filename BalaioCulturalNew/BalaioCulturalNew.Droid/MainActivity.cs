@@ -13,6 +13,7 @@ using Android.Accounts;
 using Xamarin.Auth;
 using Prism.Events;
 using BalaioCulturalNew.ViewModels.Login;
+using FFImageLoading.Forms.Droid;
 
 namespace BalaioCulturalNew.Droid
 {
@@ -30,6 +31,7 @@ namespace BalaioCulturalNew.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            CachedImageRenderer.Init();
 
             var application = new App(new AndroidInitializer());
             _eventAggregator = application.Container.Resolve<IEventAggregator>();

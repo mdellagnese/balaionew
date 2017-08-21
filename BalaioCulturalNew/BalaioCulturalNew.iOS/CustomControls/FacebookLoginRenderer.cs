@@ -41,7 +41,7 @@ namespace BalaioCulturalNew.iOS.CustomControls
                     if (AppDelegate.NeedRegistration == true)
                     {
                         //Get facebook Information
-
+                        Console.WriteLine("Entered");
                     }
 
                     App.Current.Properties["fb_access_token"] = accessToken;

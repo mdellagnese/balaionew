@@ -19,7 +19,7 @@
             Grid.Row="0" 
             Source="font_logo.png" 
             Aspect="AspectFit" 
-            WidthRequest="200" 
+            WidthRequest="200"
             Margin="60,30,60,60"/>
 
         <StackLayout Grid.Row="1" Padding="30,40,30,0" Spacing="10">

@@ -7,6 +7,7 @@ using DryIoc;
 using Prism.DryIoc;
 using BalaioCulturalNew.ViewModels.Login;
 using Prism.Events;
+using FFImageLoading.Forms.Touch;
 
 namespace BalaioCulturalNew.iOS
 {
@@ -30,6 +31,7 @@ namespace BalaioCulturalNew.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            CachedImageRenderer.Init();
 
             var application = new App(new iOSInitializer());
             _eventAggregator = application.Container.Resolve<IEventAggregator>();
