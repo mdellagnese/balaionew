@@ -38,12 +38,12 @@
                                    Margin="5"
                                    />
                 <BoxView 
-                                Grid.Row="0" Grid.Column="0"
-                                HeightRequest="2"
-                                WidthRequest="10"
-                                Color="#C8B31B"
-                                VerticalOptions="Center"
-                                Margin="5,0"/>
+                        Grid.Row="0" Grid.Column="0"
+                        HeightRequest="2"
+                        WidthRequest="10"
+                        Color="#C8B31B"
+                        VerticalOptions="Center"
+                        Margin="5,0"/>
                 <!--Descrição do evento-->
                 <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
                                    Text="Desce Neon Baile: Muita luz negra, make neon e combo duplo até 00h" 

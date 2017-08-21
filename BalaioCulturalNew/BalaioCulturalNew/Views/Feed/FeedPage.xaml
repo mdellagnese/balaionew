@@ -58,9 +58,7 @@
                     <ViewCell>
                         <Grid ColumnSpacing="0" RowSpacing="0" 
                               Padding="0" Margin="0,0,0,15"
-                              VerticalOptions="Center"
-                              HorizontalOptions="CenterAndExpand"
-                              >
+                              VerticalOptions="Center">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="50"></RowDefinition>
                                 <RowDefinition Height="100"></RowDefinition>
@@ -105,8 +103,6 @@
 
                             <Grid Grid.Row="2" Grid.ColumnSpan="3" 
                                   Padding="0" Margin="0"
-                                  HorizontalOptions="StartAndExpand"
-                                  VerticalOptions="Center"
                                   effects:ViewEffects.HasShadow="True"
                                   effects:ViewEffects.ShadowSize="10"
                                   effects:ViewEffects.ShadowColor="Black"
@@ -149,6 +145,7 @@
                                              Orientation="Horizontal" 
                                              HorizontalOptions="EndAndExpand"
                                              VerticalOptions="Center"
+                                             Margin="5,0"
                                              Spacing="10"
                                              >
                                     <ffimageloading:CachedImage
