@@ -28,7 +28,7 @@ namespace BalaioCulturalNew.Droid.CustomControls
                     redirectUrl: new Uri("http://www.facebook.com/connect/login_success.html")
                 );
 
-            auth.Completed += (sender, eventArgs) =>
+            auth.Completed += async (sender, eventArgs) =>
             {
                 // We presented the UI, so it's up to us to dimiss it on iOS.
                 //DismissViewController(true, null);
@@ -38,6 +38,20 @@ namespace BalaioCulturalNew.Droid.CustomControls
                     // Use eventArgs.Account to do wonderful things
                     var userInfo = eventArgs.Account;
                     var accessToken = userInfo.Properties["access_token"];
+
+                    if (MainActivity.NeedRegistration == true)
+                    {
+                        //Get facebook Information
+                        var graphRequest = new OAuth2Request(
+                            "GET",
+                            new Uri("https://graph.facebook.com/me?fields=picture,email,gender"),
+                            null,
+                            userInfo
+                        );
+
+                        var userDetails = await graphRequest.GetResponseAsync();
+                        Console.WriteLine(userDetails);
+                    }
 
                     //Save the API Token - We need a new request to Balio API to get the token
                     App.Current.Properties["fb_access_token"] = accessToken;

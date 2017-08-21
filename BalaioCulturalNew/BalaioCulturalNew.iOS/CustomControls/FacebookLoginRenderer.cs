@@ -38,9 +38,12 @@ namespace BalaioCulturalNew.iOS.CustomControls
                     var userInfo = eventArgs.Account;
                     var accessToken = userInfo.Properties["access_token"];
 
-                    //Save the API Token - We need a new request to Balio API to get the token
-                        
-                    
+                    if (AppDelegate.NeedRegistration == true)
+                    {
+                        //Get facebook Information
+                        Console.WriteLine("Entered");
+                    }
+
                     App.Current.Properties["fb_access_token"] = accessToken;
 
                     //Navigate

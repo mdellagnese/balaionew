@@ -25,8 +25,8 @@
             </Grid>
 
             <ffimageloading:CachedImage Grid.ColumnSpan="3" Grid.RowSpan="3"
-                                        Source="bg_perfil.png" Margin="0"
-                                        Aspect="AspectFill"></ffimageloading:CachedImage>
+                                        Source="bg_perfil.png"
+                                        Aspect="AspectFill" BackgroundColor="White"/>
 
             <Label Grid.ColumnSpan="3"
                    VerticalOptions="Center"

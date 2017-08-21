@@ -33,5 +33,15 @@ namespace BalaioCulturalNew.ViewModels.Feed
             set { SetProperty(ref _events, value); }
         }
 
+        public void OnNavigatedTo(NavigationParameters parameters)
+        {
+            Debug.WriteLine("Load Events");
+        }
+
+        public void OnNavigatedFrom(NavigationParameters parameters)
+        {
+
+        }
+
     }
 }

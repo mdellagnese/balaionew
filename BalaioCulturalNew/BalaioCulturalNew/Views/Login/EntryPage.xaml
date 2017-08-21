@@ -33,6 +33,7 @@
         <controls:ExtendedButton Grid.Row="1" 
                 Text="ENTRE COM O FACEBOOK"
                 Style="{StaticResource StdButton}"
+                BorderRadius="25"
                 Margin="30,0"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"

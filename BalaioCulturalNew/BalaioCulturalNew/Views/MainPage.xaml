@@ -4,9 +4,10 @@
                   xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
                   xmlns:templates="clr-namespace:BalaioCulturalNew.Views.Templates;assembly=BalaioCulturalNew"
                   prism:ViewModelLocator.AutowireViewModel="True"
-                  x:Class="BalaioCulturalNew.Views.MainPage">
+                  x:Class="BalaioCulturalNew.Views.MainPage"
+                  >
     <MasterDetailPage.Master>
-        <templates:MainMenuPage Title="Menu" Icon="ic_menu_white.png"></templates:MainMenuPage>
+        <templates:MainMenuPage Title="☰" Icon="ic_menu_white.png"></templates:MainMenuPage>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
         <NavigationPage BarBackgroundColor="#994F94" BarTextColor="White">

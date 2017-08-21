@@ -13,6 +13,7 @@ using Android.Accounts;
 using Xamarin.Auth;
 using Prism.Events;
 using BalaioCulturalNew.ViewModels.Login;
+using FFImageLoading.Forms.Droid;
 
 namespace BalaioCulturalNew.Droid
 {
@@ -20,7 +21,7 @@ namespace BalaioCulturalNew.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected IEventAggregator _eventAggregator;
-        public bool NeedRegistration = false;
+        public static bool NeedRegistration = false;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -30,6 +31,7 @@ namespace BalaioCulturalNew.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            CachedImageRenderer.Init();
 
             var application = new App(new AndroidInitializer());
             _eventAggregator = application.Container.Resolve<IEventAggregator>();
@@ -38,8 +40,7 @@ namespace BalaioCulturalNew.Droid
             {
                 _eventAggregator.GetEvent<NavigateToFacebookEvent>().Subscribe(OnNavigatingToFacebook);
             }
-
-
+            
             LoadApplication(application);
             //Status bar color
             Window.SetStatusBarColor(Android.Graphics.Color.Rgb(153, 79, 148));
