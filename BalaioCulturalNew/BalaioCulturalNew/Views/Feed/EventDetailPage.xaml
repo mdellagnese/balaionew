@@ -154,19 +154,36 @@
                 HeightRequest="100" 
                 BackgroundColor="Gray"
                 Margin="10,15"></BoxView>
+            
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
+                
+                <!--Bottom Share icon-->
+                <ffimageloading:CachedImage Grid.Column="0"
+                    Source="route_icon.png" HeightRequest="30" WidthRequest="30">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding RouteToEventCommand}"></TapGestureRecognizer>
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
 
-                <controls:ExtendedButton
-                    Image="route_icon.png" BackgroundColor="Transparent"></controls:ExtendedButton>
-                <controls:ExtendedButton Grid.Column="1"
-                    Image="ticket_icon.png" BackgroundColor="Transparent"></controls:ExtendedButton>
-                <controls:ExtendedButton Grid.Column="2"
-                    Image="share_icon.png" BackgroundColor="Transparent"></controls:ExtendedButton>
+                <ffimageloading:CachedImage Grid.Column="1"
+                    Source="ticket_icon.png" HeightRequest="30" WidthRequest="30">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BuyTicketToEventCommand}"></TapGestureRecognizer>
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+
+                <ffimageloading:CachedImage Grid.Column="2"
+                    Source="share_icon.png" HeightRequest="30" WidthRequest="30">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ShareEventCommand}"></TapGestureRecognizer>
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+
             </Grid>
             
         </StackLayout>

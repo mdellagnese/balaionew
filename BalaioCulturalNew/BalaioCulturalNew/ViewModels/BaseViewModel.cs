@@ -44,17 +44,17 @@ namespace BalaioCulturalNew.ViewModels
             _eventAggregator = eventAggregator;
         }
 
-        public void OnNavigatedFrom(NavigationParameters parameters)
+        public virtual void OnNavigatedFrom(NavigationParameters parameters)
         {
             
         }
 
-        public void OnNavigatedTo(NavigationParameters parameters)
+        public virtual void OnNavigatedTo(NavigationParameters parameters)
         {
             
         }
 
-        public void OnNavigatingTo(NavigationParameters parameters)
+        public virtual void OnNavigatingTo(NavigationParameters parameters)
         {
             
         }

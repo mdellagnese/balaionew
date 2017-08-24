@@ -16,7 +16,8 @@
     </ContentPage.Resources>
 
     <StackLayout Padding="10">
-        <ListView ItemsSource="{Binding Events}"
+        <ListView x:Name="feedList"
+                  ItemsSource="{Binding Events}"
                   SeparatorVisibility="None"
                   HasUnevenRows="True"
                   CachingStrategy="RecycleElement"

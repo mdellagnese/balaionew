@@ -5,11 +5,8 @@ using BalaioCulturalNew.Views.Login;
 using Xamarin.Auth;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using Prism.DryIoc;
-using Prism.Navigation;
-using BalaioCulturalNew.ViewModels.Login;
 using Newtonsoft.Json.Linq;
-using Prism.Events;
+
 
 [assembly: ExportRenderer(typeof(FacebookLoginPage), typeof(FacebookLoginPageRenderer))]
 

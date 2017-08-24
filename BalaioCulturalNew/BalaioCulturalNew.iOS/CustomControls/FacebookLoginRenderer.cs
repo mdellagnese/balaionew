@@ -1,5 +1,4 @@
 ﻿using BalaioCulturalNew.iOS.CustomControls;
-using BalaioCulturalNew.ViewModels.Login;
 using BalaioCulturalNew.Views.Login;
 using System;
 using Xamarin.Auth;
@@ -8,7 +7,7 @@ using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(FacebookLoginPage), typeof(FacebookLoginRenderer))]
 
-namespace BalaioCulturalNew.iOS.CustomControls 
+namespace BalaioCulturalNew.iOS.CustomControls
 {
 
     public class FacebookLoginRenderer : PageRenderer

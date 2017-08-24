@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace BalaioCulturalNew.ViewModels.Login
 {
-    public class FacebookLoginPageViewModel : BaseViewModel, INavigationAware
+    public class FacebookLoginPageViewModel : BaseViewModel
     {
         public bool NeedRegistration { get; set; }
 
@@ -19,7 +19,7 @@ namespace BalaioCulturalNew.ViewModels.Login
                 
         }
 
-        public void OnNavigatedTo(NavigationParameters parameters)
+        public override void OnNavigatedTo(NavigationParameters parameters)
         {
             if(parameters.ContainsKey("NeedRegistration"))
             {
@@ -27,10 +27,6 @@ namespace BalaioCulturalNew.ViewModels.Login
                 _eventAggregator.GetEvent<NavigateToFacebookEvent>().Publish(true);
             }    
         }
-        
-        public void OnNavigatedFrom(NavigationParameters parameters)
-        {
 
-        }
     }
 }
