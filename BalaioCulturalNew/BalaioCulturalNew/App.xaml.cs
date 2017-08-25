@@ -11,6 +11,9 @@ using BalaioCulturalNew.ViewModels.Templates;
 using BalaioCulturalNew.ViewModels.Feed;
 using System.Threading.Tasks;
 using System;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 //[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace BalaioCulturalNew
@@ -22,6 +25,10 @@ namespace BalaioCulturalNew
         protected override void OnInitialized()
         {
             InitializeComponent();
+
+            MobileCenter.Start("android=7f5c2202-81c7-490e-88fe-376eeb5dd442;" +
+                   "ios=d6e2c014-7e50-480e-837d-82e0e423d4df;",
+                   typeof(Analytics), typeof(Crashes));
 
             TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
 
