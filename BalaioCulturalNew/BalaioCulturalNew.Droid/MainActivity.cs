@@ -10,7 +10,6 @@ using DryIoc;
 using Prism.DryIoc;
 using Prism.Navigation;
 using Android.Accounts;
-using Xamarin.Auth;
 using Prism.Events;
 using BalaioCulturalNew.ViewModels.Login;
 using FFImageLoading.Forms.Droid;
