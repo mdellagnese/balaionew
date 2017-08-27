@@ -2,7 +2,7 @@
 
 namespace BalaioCulturalNew.Effects
 {
-    class BorderlessEntryEffect : RoutingEffect
+    public class BorderlessEntryEffect : RoutingEffect
     {
         public BorderlessEntryEffect() : base("BalaioCulturalNew.BorderlessEntryEffect")
         {

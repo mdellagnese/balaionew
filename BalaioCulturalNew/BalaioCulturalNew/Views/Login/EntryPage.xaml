@@ -76,17 +76,29 @@
         </Entry>
 
 
-        <controls:ExtendedButton Grid.Row="5" 
+        <controls:ExtendedButton 
+                Grid.Row="5" 
                 Text="ENTRAR"
-                Margin="30,0,30,0"
+                Margin="30,0"
                 VerticalOptions="Center"
                 WidthRequest="400"
                 HeightRequest="55"
                 TextColor="White"
-                BackgroundColor="#994F94"
+                BackgroundColor="#CCCCCC"
                 HorizontalOptions="Center"
-                BorderRadius="25"
-                Command="{Binding NavigateToMainMenuCommand}"/>
+                BorderRadius="25"           
+                Command="{Binding NavigateToMainMenuCommand}">
+            <controls:ExtendedButton.Triggers>
+                <Trigger
+                        TargetType="Button"
+                        Property="IsEnabled"
+                        Value="True">
+                    <Setter
+                            Property="BackgroundColor"
+                            Value="#994F94" />
+                </Trigger>
+            </controls:ExtendedButton.Triggers>
+        </controls:ExtendedButton>
 
         <controls:ExtendedButton Grid.Row="6" 
                             HorizontalOptions="Center"

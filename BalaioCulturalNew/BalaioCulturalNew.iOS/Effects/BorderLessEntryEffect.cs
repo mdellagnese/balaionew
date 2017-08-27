@@ -3,6 +3,7 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
+[assembly: ResolutionGroupName("BalaioCulturalNew")]
 [assembly: ExportEffect(typeof(BorderlessEntryEffect), "BorderlessEntryEffect")]
 
 namespace BalaioCulturalNew.iOS.Effects

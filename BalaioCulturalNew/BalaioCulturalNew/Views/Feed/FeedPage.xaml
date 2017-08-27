@@ -103,11 +103,7 @@
                                    />
 
                             <Grid Grid.Row="2" Grid.ColumnSpan="3" 
-                                  Padding="0" Margin="0"
-                                  effects:ViewEffects.HasShadow="True"
-                                  effects:ViewEffects.ShadowSize="10"
-                                  effects:ViewEffects.ShadowColor="Black"
-                                  >
+                                  Padding="0" Margin="0">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
