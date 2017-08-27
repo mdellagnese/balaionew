@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Converters\ItemTappedEventArgsConverter.cs" />
+    <Compile Include="Effects\BorderlessEntryEffect.cs" />
     <Compile Include="Effects\ViewEffects.cs" />
     <Compile Include="Helpers\ICustomSettings.cs" />
     <Compile Include="Helpers\Settings.cs" />

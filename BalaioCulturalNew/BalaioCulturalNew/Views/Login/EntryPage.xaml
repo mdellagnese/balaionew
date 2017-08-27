@@ -4,6 +4,7 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:effects="clr-namespace:BalaioCulturalNew.Effects"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Login.EntryPage"
              NavigationPage.HasNavigationBar="False"
@@ -49,13 +50,17 @@
                VerticalOptions="Center"
                FontSize="Micro"/>
 
-        
+
         <Entry Grid.Row="3"  BackgroundColor="Transparent" 
                 Placeholder="Usuário ou e-mail" 
                 PlaceholderColor="White"
                 TextColor="White"
                 Margin="30,0"
-                Text="{Binding Username}"/>
+                Text="{Binding Username}">
+            <Entry.Effects>
+                <effects:BorderlessEntryEffect />
+            </Entry.Effects>
+        </Entry>
         <Entry  
             Grid.Row="4" 
             BackgroundColor="Transparent" 
@@ -64,8 +69,11 @@
             TextColor="White"
             PlaceholderColor="White"
             Margin="30,0"
-            Text="{Binding Password}"
-                />
+            Text="{Binding Password}">
+            <Entry.Effects>
+                <effects:BorderlessEntryEffect />
+            </Entry.Effects>
+        </Entry>
 
 
         <controls:ExtendedButton Grid.Row="5" 
