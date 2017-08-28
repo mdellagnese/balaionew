@@ -44,19 +44,6 @@ namespace BalaioCulturalNew
             
         }
 
-        private void TaskScheduler_UnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
-        {
-            if(!e.Observed)
-            {
-                //prevents the app domain from being torn down
-                e.SetObserved();
-
-                //show the crash page
-                //TODO: Better exceptions handler
-                this.NavigationService.NavigateAsync("app:///MainPage?error=true");
-            }
-        }
-
         protected override void RegisterTypes()
         {
             //Interfaces
@@ -94,6 +81,19 @@ namespace BalaioCulturalNew
                 {
                     NavigationService.GoBackAsync();
                 });
+            }
+        }
+
+        private void TaskScheduler_UnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
+        {
+            if (!e.Observed)
+            {
+                //prevents the app domain from being torn down
+                e.SetObserved();
+
+                //show the crash page
+                //TODO: Better exceptions handler
+                this.NavigationService.NavigateAsync("app:///MainPage?error=true");
             }
         }
     }

@@ -16,7 +16,7 @@ namespace BalaioCulturalNew.ViewModels.Login
 
         public FacebookLoginPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService, IEventAggregator eventAggregator) : base(navigationService, pageDialogService, eventAggregator)
         {
-                
+            NeedRegistration = true;
         }
 
         public override void OnNavigatedTo(NavigationParameters parameters)

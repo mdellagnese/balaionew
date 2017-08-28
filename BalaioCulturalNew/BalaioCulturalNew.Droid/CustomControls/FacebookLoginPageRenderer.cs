@@ -7,7 +7,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-
+using BalaioCulturalNew.Models;
 
 [assembly: ExportRenderer(typeof(FacebookLoginPage), typeof(FacebookLoginPageRenderer))]
 
@@ -43,28 +43,35 @@ namespace BalaioCulturalNew.Droid.CustomControls
                 var userAccount = eventArgs.Account;
                 var accessToken = userAccount.Properties["access_token"];
 
+                try
+                {
+                    //Get facebook Information
+                    var graphRequest = new OAuth2Request(
+                        "GET",
+                        new Uri("https://graph.facebook.com/me?fields=email,picture"),
+                        null,
+                        userAccount
+                    );
+
+                    var response = await graphRequest.GetResponseAsync();
+                    var userData = JsonConvert.DeserializeObject<User>(response.GetResponseText()) as User;
+
+                    //Save the Users details
+                    App.Current.Properties["profile_image_url"] = userData.picture.data.url;
+                    App.Current.Properties["email"] = userData.email;
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+
                 if (MainActivity.NeedRegistration == true)
                 {
-                    try
-                    {
-                        //Get facebook Information
-                        var graphRequest = new OAuth2Request(
-                            "GET",
-                            new Uri("https://graph.facebook.com/me?fields=email,picture"),
-                            null,
-                            userAccount
-                        );
-
-                        var response = await graphRequest.GetResponseAsync();
-                        var userData = JsonConvert.SerializeObject(response.GetResponseText());
-
-                        Console.WriteLine("Dados");
-                        //Save the Users details
-                    }
-                    catch (Exception e)
-                    {
-                        throw e;
-                    }
+                    //Post new register to API
+                }
+                else
+                {
+                    //Gets Balio APi Token
                 }
 
                 //Save the API Token - We need a new request to Balio API to get the token

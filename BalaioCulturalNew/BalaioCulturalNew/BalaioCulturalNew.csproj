@@ -39,6 +39,7 @@
     <Compile Include="Effects\BorderlessEntryEffect.cs" />
     <Compile Include="Helpers\ICustomSettings.cs" />
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IAuthService.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
