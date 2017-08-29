@@ -21,7 +21,7 @@ namespace BalaioCulturalNew.Droid.CustomControls
 
             var auth = new OAuth2Authenticator(
                     clientId: "1834003460194581",
-                    scope: "",
+                    scope: "public_profile,email,user_location",
                     authorizeUrl: new Uri("https://m.facebook.com/dialog/oauth/"),
                     redirectUrl: new Uri("http://www.facebook.com/connect/login_success.html")
                 );
@@ -48,7 +48,7 @@ namespace BalaioCulturalNew.Droid.CustomControls
                     //Get facebook Information
                     var graphRequest = new OAuth2Request(
                         "GET",
-                        new Uri("https://graph.facebook.com/me?fields=email,picture"),
+                        new Uri("https://graph.facebook.com/me?fields=email,picture.type(normal),name"),
                         null,
                         userAccount
                     );
@@ -59,6 +59,8 @@ namespace BalaioCulturalNew.Droid.CustomControls
                     //Save the Users details
                     App.Current.Properties["profile_image_url"] = userData.picture.data.url;
                     App.Current.Properties["email"] = userData.email;
+                    App.Current.Properties["user_full_name"] = userData.name;
+                    
                 }
                 catch (Exception e)
                 {

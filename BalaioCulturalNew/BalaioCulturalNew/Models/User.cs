@@ -23,5 +23,7 @@ namespace BalaioCulturalNew.Models
         public FacebookPicutre picture { get; set; }
         [JsonProperty("id")]
         public string id { get; set; }
+        [JsonProperty("name")]
+        public string name { get; set; }
     }
 }

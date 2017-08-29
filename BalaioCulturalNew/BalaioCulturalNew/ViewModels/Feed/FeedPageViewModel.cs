@@ -17,8 +17,10 @@ namespace BalaioCulturalNew.ViewModels.Feed
         {
             Events = new ObservableCollection<string> { "Teste", "Teste 2", "Teste 2" };
             EventSelectedCommand = new DelegateCommand<string>((selectedEvent) => {
-                var parameters = new NavigationParameters();
-                parameters.Add("Title", selectedEvent);
+                var parameters = new NavigationParameters
+                {
+                    { "Title", selectedEvent }
+                };
 
                 navigationService.NavigateAsync("EventDetailPage", parameters, false);
             });
@@ -33,12 +35,12 @@ namespace BalaioCulturalNew.ViewModels.Feed
             set { SetProperty(ref _events, value); }
         }
 
-        public void OnNavigatedTo(NavigationParameters parameters)
+        public override void OnNavigatedTo(NavigationParameters parameters)
         {
             Debug.WriteLine("Load Events");
         }
 
-        public void OnNavigatedFrom(NavigationParameters parameters)
+        public override void OnNavigatedFrom(NavigationParameters parameters)
         {
 
         }
