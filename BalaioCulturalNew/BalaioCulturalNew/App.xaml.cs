@@ -33,7 +33,7 @@ namespace BalaioCulturalNew
             TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
 
             //Se não tiver usuario logado
-            if (!Properties.ContainsKey("fb_access_token")) {
+            if (!Application.Current.Properties.ContainsKey("fb_access_token")) {
                 NavigationService.NavigateAsync("app:///NavigationPage/LoginPage", null, true);
             }
             else
@@ -58,7 +58,7 @@ namespace BalaioCulturalNew
             Container.RegisterTypeForNavigation<MainDetailPage, MainDetailPageViewModel>();
             Container.RegisterTypeForNavigation<FeedPage, FeedPageViewModel>();
             Container.RegisterTypeForNavigation<FacebookLoginPage, FacebookLoginPageViewModel>();
-            Container.RegisterTypeForNavigation<EventDetailPage>();
+            Container.RegisterTypeForNavigation<EventDetailPage, EventDetailPageViewModel>();
         }
 
         public Action SuccessfulLoginAction
