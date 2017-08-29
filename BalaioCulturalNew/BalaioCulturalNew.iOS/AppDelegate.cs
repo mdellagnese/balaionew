@@ -43,6 +43,7 @@ namespace BalaioCulturalNew.iOS
             
             LoadApplication(application);
 
+            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(0, 67, 88);
             return base.FinishedLaunching(app, options);
         }
 

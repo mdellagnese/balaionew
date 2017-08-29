@@ -9,6 +9,10 @@
       
       <Color x:Key="Purple">#994F94</Color>
       <Color x:Key="DarkYellow">#C8B31B</Color>
+      <Color x:Key="BalaioGreen">#BEDB39</Color>
+      <Color x:Key="DefaultNavColor">#004358</Color>
+      <Color x:Key="BalaioBlue">#004358</Color>
+      
       <x:Int32 x:Key="BtnRadius">25</x:Int32>
       <x:Int32 x:Key="BtnWidth">400</x:Int32>
       <x:Int32 x:Key="BtnHeight">50</x:Int32>
@@ -38,8 +42,8 @@
       </Style>
       
       <Style x:Key="MainMenuButton" BasedOn="{StaticResource StdButton}" TargetType="Button">
-        <Setter Property="TextColor" Value="{StaticResource Purple}"></Setter>
-        <Setter Property="BackgroundColor" Value="White"></Setter>
+        <Setter Property="TextColor" Value="{StaticResource BalaioGreen}"></Setter>
+        <Setter Property="BackgroundColor"  Value="{StaticResource BalaioBlue}"></Setter>
       </Style>
       
     </ResourceDictionary>

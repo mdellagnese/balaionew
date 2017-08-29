@@ -42,7 +42,7 @@ namespace BalaioCulturalNew.Droid
             
             LoadApplication(application);
             //Status bar color
-            Window.SetStatusBarColor(Android.Graphics.Color.Rgb(153, 79, 148));
+            Window.SetStatusBarColor(Android.Graphics.Color.Rgb(0, 67, 88));
         }
 
         private void OnNavigatingToFacebook(bool obj)
