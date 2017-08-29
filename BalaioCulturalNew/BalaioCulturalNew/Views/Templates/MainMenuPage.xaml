@@ -40,16 +40,17 @@
             <Frame 
                 Grid.Row="2" Grid.Column="1"
                 BackgroundColor="White" VerticalOptions="Center" HorizontalOptions="Center"
-                Padding="10" Margin="0,0,0,15">
-                    <circle:CircleImage 
-                                    HeightRequest="70"
-                                    VerticalOptions="Center"
-                                    Aspect="AspectFit"
-                                    Margin="0">
-                        <circle:CircleImage.Source>
+                Padding="10" Margin="0">
+                <ffimageloading:CachedImage 
+                                HeightRequest="100"
+                                WidthRequest="100"
+                                VerticalOptions="Center"
+                                Aspect="AspectFit"
+                                Margin="0">
+                    <ffimageloading:CachedImage.Source>
                             <UriImageSource Uri="{Binding ProfileImageUrl}"></UriImageSource>
-                        </circle:CircleImage.Source>
-                    </circle:CircleImage>
+                        </ffimageloading:CachedImage.Source>
+                    </ffimageloading:CachedImage>
             </Frame>
             
 

@@ -1,5 +1,7 @@
 ﻿using BalaioCulturalNew.iOS.CustomControls;
+using BalaioCulturalNew.Models;
 using BalaioCulturalNew.Views.Login;
+using Newtonsoft.Json;
 using System;
 using Xamarin.Auth;
 using Xamarin.Forms;
@@ -27,26 +29,64 @@ namespace BalaioCulturalNew.iOS.CustomControls
                     redirectUrl: new Uri("http://www.facebook.com/connect/login_success.html")
                 );
 
-            auth.Completed += (sender, eventArgs) => {
+            auth.Completed += async (sender, eventArgs) => {
                 // We presented the UI, so it's up to us to dimiss it on iOS.
                 DismissViewController(true, null);
 
                 if (eventArgs.IsAuthenticated)
                 {
                     // Use eventArgs.Account to do wonderful things
-                    var userInfo = eventArgs.Account;
-                    var accessToken = userInfo.Properties["access_token"];
+                    var userAccount = eventArgs.Account;
+                    var accessToken = userAccount.Properties["access_token"];
+
+
+                    try
+                    {
+                        //Get facebook Information
+                        var graphRequest = new OAuth2Request(
+                            "GET",
+                            new Uri("https://graph.facebook.com/me?fields=email,picture.type(normal),name"),
+                            null,
+                            userAccount
+                        );
+
+                        var response = await graphRequest.GetResponseAsync();
+                        var userData = JsonConvert.DeserializeObject<User>(response.GetResponseText()) as User;
+
+                        //Save the Users details
+                        App.Current.Properties["profile_image_url"] = userData.picture.data.url;
+                        App.Current.Properties["email"] = userData.email;
+                        App.Current.Properties["user_full_name"] = userData.name;
+
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
 
                     if (AppDelegate.NeedRegistration == true)
                     {
                         //Get facebook Information
                         Console.WriteLine("Entered");
                     }
+                    else
+                    {
+                        //Gets Balio APi Token
+                    }
 
+                    //Save the API Token - We need a new request to Balio API to get the token
                     App.Current.Properties["fb_access_token"] = accessToken;
 
                     //Navigate
-                    (App.Current as App).SuccessfulLoginAction.Invoke();
+                    try
+                    {
+                        (App.Current as App).SuccessfulLoginAction.Invoke();
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
+                    
                 }
                 else
                 {
