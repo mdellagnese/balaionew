@@ -14,6 +14,8 @@ using System;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
+using BalaioCulturalNew.Views.MenuItems;
+using BalaioCulturalNew.ViewModels.MenuItems;
 
 //[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace BalaioCulturalNew
@@ -59,6 +61,7 @@ namespace BalaioCulturalNew
             Container.RegisterTypeForNavigation<FeedPage, FeedPageViewModel>();
             Container.RegisterTypeForNavigation<FacebookLoginPage, FacebookLoginPageViewModel>();
             Container.RegisterTypeForNavigation<EventDetailPage, EventDetailPageViewModel>();
+            Container.RegisterTypeForNavigation<MyProfilePage, MyProfilePageViewModel>();
         }
 
         public Action SuccessfulLoginAction

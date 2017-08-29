@@ -49,6 +49,7 @@
     <Compile Include="ViewModels\Login\EntryPageViewModel.cs" />
     <Compile Include="ViewModels\Login\LoginPageViewModel.cs" />
     <Compile Include="ViewModels\Login\NavigateToFacebookEvent.cs" />
+    <Compile Include="ViewModels\MenuItems\MyProfilePageViewModel.cs" />
     <Compile Include="ViewModels\Templates\MainDetailPageViewModel.cs" />
     <Compile Include="ViewModels\Templates\MainMenuPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
@@ -63,6 +64,9 @@
     </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuItems\MyProfilePage.xaml.cs">
+      <DependentUpon>MyProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Templates\MainDetailPage.xaml.cs">
       <DependentUpon>MainDetailPage.xaml</DependentUpon>
@@ -231,6 +235,12 @@
     <Folder Include="CustomControls\" />
     <Folder Include="Views\Balaio\" />
     <Folder Include="Views\Places\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MenuItems\MyProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

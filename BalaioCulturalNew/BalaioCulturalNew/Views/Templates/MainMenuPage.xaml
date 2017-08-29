@@ -59,18 +59,34 @@
         <!--Menus-->
         <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
                     Text="Editar Perfil"
-                    HorizontalContentAlignment="Start"/>
+                    HorizontalContentAlignment="Start"
+                    Command="{Binding NavigateToProfileCommand}"/>
+        
         <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
                     Text="Alterar Localização"
-                    HorizontalContentAlignment="Start"/>
+                    HorizontalContentAlignment="Start"
+                    Command="{Binding NavigateToLocationCommand}"/>
+        
         <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
                     Text="Contato"
-                    HorizontalContentAlignment="Start"/>
+                    HorizontalContentAlignment="Start"
+                    Command="{Binding NavigateToContactCommand}"/>
+        
         <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
                     Text="Quero Anunciar"
-                    HorizontalContentAlignment="Start"/>
+                    HorizontalContentAlignment="Start"
+                    Command="{Binding NavigateToAnnounceCommand}"/>
+        
         <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
                     Text="Política e Privacidade"
-                    HorizontalContentAlignment="Start"/>
+                    HorizontalContentAlignment="Start"
+                    Command="{Binding NavigateToPrivacyCommand}"/>
+
+        <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
+                    Text="Sair"
+                    HorizontalContentAlignment="Start"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="End"
+                    Command="{Binding LogoffCommand}"/>
     </StackLayout>
 </ContentPage>
