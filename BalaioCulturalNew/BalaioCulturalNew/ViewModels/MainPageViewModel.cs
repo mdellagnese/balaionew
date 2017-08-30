@@ -3,14 +3,17 @@ using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Prism.Events;
+using Prism.Navigation;
+using Prism.Services;
 
 namespace BalaioCulturalNew.ViewModels
 {
-	public class MainPageViewModel : BindableBase
+	public class MainPageViewModel : BaseViewModel
 	{
-        public MainPageViewModel()
+        public MainPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService, IEventAggregator eventAggregator) : base(navigationService, pageDialogService, eventAggregator)
         {
             
         }
-	}
+    }
 }

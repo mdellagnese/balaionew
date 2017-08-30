@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="Converters\ItemTappedEventArgsConverter.cs" />
     <Compile Include="Effects\BorderlessEntryEffect.cs" />
+    <Compile Include="Events\NavigateFromMenuEvent.cs" />
     <Compile Include="Helpers\ICustomSettings.cs" />
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Models\User.cs" />
@@ -235,7 +236,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CustomControls\" />
     <Folder Include="Views\Balaio\" />
     <Folder Include="Views\Places\" />
   </ItemGroup>

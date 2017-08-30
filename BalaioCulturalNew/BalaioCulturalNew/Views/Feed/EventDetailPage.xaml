@@ -10,7 +10,7 @@
 
     <ScrollView>
         <StackLayout>
-            <StackLayout>
+            <StackLayout Padding="10">
                 <!--Cabeçalho-->
                 <Grid ColumnSpacing="0" RowSpacing="0" Padding="0">
                     <Grid.RowDefinitions>
