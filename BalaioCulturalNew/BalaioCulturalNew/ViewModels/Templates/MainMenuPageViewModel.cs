@@ -30,15 +30,12 @@ namespace BalaioCulturalNew.ViewModels.Templates
         
         public MainMenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
+            if(Application.Current.Properties.ContainsKey("profile_image_url"))
+                ProfileImageUrl = new Uri((string)Application.Current.Properties["profile_image_url"]);
+            if (Application.Current.Properties.ContainsKey("user_full_name"))
+                Name = (string)Application.Current.Properties["user_full_name"];
+            
             NavigateToProfileCommand = new DelegateCommand(NavigateToProfile);
-        }
-
-        public override void OnNavigatingTo(NavigationParameters parameters)
-        {
-            ProfileImageUrl = new Uri((string)Application.Current.Properties["profile_image_url"]);
-            Name = (string)Application.Current.Properties["user_full_name"];
-
-            base.OnNavigatingTo(parameters);
         }
 
         private void NavigateToProfile()

@@ -45,6 +45,26 @@
         <Setter Property="TextColor" Value="{StaticResource BalaioGreen}"></Setter>
         <Setter Property="BackgroundColor"  Value="{StaticResource BalaioBlue}"></Setter>
       </Style>
+
+      <Style x:Key="LabelGreen" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource BalaioGreen}"></Setter>
+        <Setter Property="BackgroundColor"  Value="Transparent"></Setter>
+        <Setter Property="FontSize"  Value="Micro"></Setter>
+      </Style>
+
+      <Style x:Key="WhiteEntry" TargetType="Entry">
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Setter Property="BackgroundColor"  Value="Transparent"></Setter>
+        <Setter Property="FontSize"  Value="Small"></Setter>
+      </Style>
+
+      <Style x:Key="BlueBtn" BasedOn="{StaticResource StdButton}" TargetType="Button">
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Setter Property="BorderColor" Value="{StaticResource BalaioGreen}"></Setter>
+        <Setter Property="BackgroundColor"  Value="{StaticResource BalaioBlue}"></Setter>
+        
+      </Style>
+
       
     </ResourceDictionary>
   </Application.Resources>
