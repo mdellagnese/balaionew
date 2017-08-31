@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="BalaioCulturalNew.Views.MenuItems.ContactPage"
+             Title="Contato">
+    <StackLayout BackgroundColor="{StaticResource BalaioBlue}" Padding="10" Spacing="10">
+        <Grid HeightRequest="180" Padding="0" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <ffimageloading:CachedImage Grid.ColumnSpan="3" Grid.RowSpan="3"
+                                        Source="bg_perfil.png"
+                                        Aspect="AspectFill" BackgroundColor="White"/>
+
+            <Label Grid.ColumnSpan="3"
+                   VerticalOptions="End"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Large"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   Text="{Binding Name}"
+                   Margin="5,15,5,5"/>
+
+            <Frame 
+                Grid.Row="2" Grid.Column="1"
+                BackgroundColor="White" 
+                VerticalOptions="Center" HorizontalOptions="Center"
+                Margin="0,0,0,10" Padding="0,5">
+                <ffimageloading:CachedImage 
+                                HeightRequest="100"
+                                WidthRequest="100"
+                                VerticalOptions="Center"
+                                Aspect="AspectFit" Margin="0">
+                    <ffimageloading:CachedImage.Source>
+                        <UriImageSource Uri="{Binding ProfileImageUrl}"></UriImageSource>
+                    </ffimageloading:CachedImage.Source>
+                </ffimageloading:CachedImage>
+            </Frame>
+
+        </Grid>
+        
+        <Label Style="{StaticResource LabelGreen}"
+               Text="Quer compartilhar algo com a gente?"
+               FontSize="Default"
+               HorizontalOptions="Center"></Label>
+
+        <Label Style="{StaticResource LabelGreen}"
+               Text="Mande uma mensagem :)"
+               FontSize="Default"
+               HorizontalOptions="Center" Margin="0,0,0,5"></Label>
+        
+        <Editor BackgroundColor="White"
+                TextColor="Black" HeightRequest="150"/>
+
+        <Button Style="{StaticResource BlueBtn}"
+                Text="Enviar"/>
+
+    </StackLayout>
+</ContentPage>

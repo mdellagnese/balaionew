@@ -42,6 +42,10 @@ namespace BalaioCulturalNew.ViewModels.Templates
             NavigateToProfileCommand = new DelegateCommand(() => {
                 _eventAggregator.GetEvent<NavigateFromMenuEvent>().Publish("MyProfilePage");
             });
+
+            NavigateToContactCommand = new DelegateCommand(() => {
+                _eventAggregator.GetEvent<NavigateFromMenuEvent>().Publish("ContactPage");
+            });
         }
         
     }
