@@ -39,21 +39,20 @@
                    Text="{Binding Name}"
                    Margin="5,15,5,5"/>
 
-            <Frame 
-                Grid.Row="2" Grid.Column="1"
-                BackgroundColor="White" 
-                VerticalOptions="Center" HorizontalOptions="Center"
-                Margin="0,0,0,10" Padding="0,5">
-                <ffimageloading:CachedImage 
-                                HeightRequest="100"
-                                WidthRequest="100"
-                                VerticalOptions="Center"
-                                Aspect="AspectFit" Margin="0">
-                    <ffimageloading:CachedImage.Source>
-                        <UriImageSource Uri="{Binding ProfileImageUrl}"></UriImageSource>
-                    </ffimageloading:CachedImage.Source>
-                </ffimageloading:CachedImage>
-            </Frame>
+            <ffimageloading:CachedImage Grid.Row="2" Grid.Column="1"
+                                        Source="background_profile_image.png" 
+                                        BackgroundColor="Transparent"
+                                        HeightRequest="105"
+                                        HorizontalOptions="Center" VerticalOptions="Center" 
+                                        Margin="0"/>
+
+            <circle:CircleImage 
+                            Grid.Row="2" Grid.Column="1"
+                            VerticalOptions="Center" HorizontalOptions="Center"
+                            HeightRequest="150" Margin="0"
+                            Source="{Binding ProfileImageUrl}"/>
+
+
 
         </Grid>
         <!--Menus-->
