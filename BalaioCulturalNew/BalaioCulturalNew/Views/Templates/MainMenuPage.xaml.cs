@@ -7,6 +7,11 @@ namespace BalaioCulturalNew.Views.Templates
         public MainMenuPage()
         {
             InitializeComponent();
+
+            listMenu.ItemSelected += (sender, e) => {
+                ((ListView)sender).SelectedItem = null;
+            };
         }
+        
     }
 }

@@ -1,16 +1,20 @@
 ﻿using BalaioCulturalNew.Events;
+using BalaioCulturalNew.Models;
 using BalaioCulturalNew.Views;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Mvvm;
 using Prism.Navigation;
 using System;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace BalaioCulturalNew.ViewModels.Templates
 {
+    
     public class MainMenuPageViewModel : BaseViewModel
     {
+        #region Properties
         private Uri _profileImageUrl;
         public Uri ProfileImageUrl
         {
@@ -25,15 +29,27 @@ namespace BalaioCulturalNew.ViewModels.Templates
             set { SetProperty(ref _name, value); }
         }
 
-        
+        private ObservableCollection<CustomMenuItem> _menuItems;
+        public ObservableCollection<CustomMenuItem> MenuItems
+        {
+            get { return _menuItems; }
+            set { SetProperty(ref _menuItems, value); }
+        }
+
+        #endregion
+
+        #region Commands
         public DelegateCommand NavigateToProfileCommand { get; private set; }
         public DelegateCommand NavigateToLocationCommand { get; private set; }
         public DelegateCommand NavigateToContactCommand { get; private set; }
         public DelegateCommand NavigateToAnnounceCommand { get; private set; }
         public DelegateCommand NavigateToPrivacyCommand { get; private set; }
-
+        #endregion
+        
         public MainMenuPageViewModel(INavigationService navigationService, IEventAggregator eventAggregator) : base(navigationService, eventAggregator)
         {
+            MenuItems = GetMenus();
+
             if (Application.Current.Properties.ContainsKey("profile_image_url"))
                 ProfileImageUrl = new Uri((string)Application.Current.Properties["profile_image_url"]);
             if (Application.Current.Properties.ContainsKey("user_full_name"))
@@ -47,6 +63,18 @@ namespace BalaioCulturalNew.ViewModels.Templates
                 _eventAggregator.GetEvent<NavigateFromMenuEvent>().Publish("ContactPage");
             });
         }
-        
+
+        private ObservableCollection<CustomMenuItem> GetMenus()
+        {
+            var Menus = new ObservableCollection<CustomMenuItem>();
+            Menus.Add(new CustomMenuItem { Text = "Editar Perfil", Uri = "MyProfilePage", Icon = "" });
+            Menus.Add(new CustomMenuItem { Text = "Alterar Localização", Uri = "MyProfilePage", Icon = "" });
+            Menus.Add(new CustomMenuItem { Text = "Contato", Uri = "MyProfilePage", Icon = "" });
+            Menus.Add(new CustomMenuItem { Text = "Quero Anunciar", Uri = "MyProfilePage", Icon = "" });
+            Menus.Add(new CustomMenuItem { Text = "Política e Privacidade", Uri = "MyProfilePage", Icon = "" });
+            Menus.Add(new CustomMenuItem { Text = "Sair", Uri = "MyProfilePage", Icon = "" });
+
+            return Menus;
+        }
     }
 }

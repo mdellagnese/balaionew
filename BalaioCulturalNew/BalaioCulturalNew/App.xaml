@@ -52,6 +52,17 @@
         <Setter Property="FontSize"  Value="Micro"></Setter>
       </Style>
 
+      <Style TargetType="Label" x:Key="FALabel">
+        <Setter Property="FontFamily">
+          <Setter.Value>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.iOS>FontAwesome</OnPlatform.iOS>
+              <OnPlatform.Android>fontawesome.ttf#FontAwesome</OnPlatform.Android>
+            </OnPlatform>
+          </Setter.Value>
+        </Setter>
+      </Style>
+
       <Style x:Key="WhiteEntry" TargetType="Entry">
         <Setter Property="TextColor" Value="White"></Setter>
         <Setter Property="BackgroundColor"  Value="Transparent"></Setter>

@@ -11,6 +11,7 @@
     x:Class="BalaioCulturalNew.Views.Templates.MainMenuPage"
     Padding="0"
     BackgroundColor="{StaticResource DefaultNavColor}">
+    
     <StackLayout 
         Spacing="0">
         
@@ -60,43 +61,25 @@
 
 
         </Grid>
-        <!--Menus-->
-        <controls:ExtendedButton 
-            Style="{StaticResource MainMenuButton}" 
-            Text="Editar Perfil"
-            HorizontalContentAlignment="Start"
-            Command="{Binding NavigateToProfileCommand}"/>
-        
-        <controls:ExtendedButton 
-            Style="{StaticResource MainMenuButton}" 
-            Text="Alterar Localização"
-            HorizontalContentAlignment="Start"
-            Command="{Binding NavigateToLocationCommand}"/>
-        
-        <controls:ExtendedButton 
-            Style="{StaticResource MainMenuButton}" 
-            Text="Contato"
-            HorizontalContentAlignment="Start"
-            Command="{Binding NavigateToContactCommand}"/>
-        
-        <controls:ExtendedButton 
-            Style="{StaticResource MainMenuButton}" 
-            Text="Quero Anunciar"
-            HorizontalContentAlignment="Start"
-            Command="{Binding NavigateToAnnounceCommand}"/>
-        
-        <controls:ExtendedButton 
-            Style="{StaticResource MainMenuButton}" 
-            Text="Política e Privacidade"
-            HorizontalContentAlignment="Start"
-            Command="{Binding NavigateToPrivacyCommand}"/>
 
-        <controls:ExtendedButton 
-            Style="{StaticResource MainMenuButton}" 
-            Text="Sair"
-            HorizontalContentAlignment="Start"
-            HorizontalOptions="StartAndExpand"
-            VerticalOptions="End"
-            Command="{Binding LogoffCommand}"/>
+        <ListView x:Name="listMenu" RowHeight="50" ItemsSource="{Binding MenuItems}" SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Margin="10" VerticalOptions="Center">
+                            <Label 
+                                Text="{Binding Icon}" WidthRequest="25" 
+                                VerticalTextAlignment="Center" VerticalOptions="Center" 
+                                FontSize="18" Margin="0,0,10,0" 
+                                Style="{StaticResource FALabel}" TextColor="White" />
+                            <Label 
+                                Text="{Binding Text}" TextColor="{StaticResource BalaioGreen}"
+                                FontSize="Default"
+                                VerticalTextAlignment="Start" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>

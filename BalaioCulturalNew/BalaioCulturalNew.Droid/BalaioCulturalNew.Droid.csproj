@@ -197,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <AndroidAsset Include="Assets\fontawesome.ttf" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
