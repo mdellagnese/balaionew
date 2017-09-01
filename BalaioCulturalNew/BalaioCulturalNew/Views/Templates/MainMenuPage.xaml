@@ -1,17 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
-             xmlns:circle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             xmlns:templates="clr-namespace:BalaioCulturalNew.Views.Templates"
-             prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="BalaioCulturalNew.Views.Templates.MainMenuPage"
-             Padding="0"
-             BackgroundColor="{StaticResource DefaultNavColor}">
-    <StackLayout Spacing="0">
-        <!-- Topo Menu-->
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+    xmlns:circle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:templates="clr-namespace:BalaioCulturalNew.Views.Templates"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:Class="BalaioCulturalNew.Views.Templates.MainMenuPage"
+    Padding="0"
+    BackgroundColor="{StaticResource DefaultNavColor}">
+    <StackLayout 
+        Spacing="0">
+        
+        <!-- Topo Menu (Todo:Reaproveitar) -->
         <Grid HeightRequest="180" Padding="0" Margin="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="80"></RowDefinition>
@@ -26,9 +29,10 @@
                 </Grid.ColumnDefinitions>
             </Grid>
 
-            <ffimageloading:CachedImage Grid.ColumnSpan="3" Grid.RowSpan="3"
-                                        Source="bg_perfil.png"
-                                        Aspect="AspectFill" BackgroundColor="White"/>
+            <ffimageloading:CachedImage 
+                Grid.ColumnSpan="3" Grid.RowSpan="3"
+                Source="bg_perfil.png"
+                Aspect="AspectFill" BackgroundColor="White"/>
 
             <Label Grid.ColumnSpan="3"
                    VerticalOptions="End"
@@ -39,53 +43,60 @@
                    Text="{Binding Name}"
                    Margin="5,15,5,5"/>
 
-            <ffimageloading:CachedImage Grid.Row="2" Grid.Column="1"
-                                        Source="background_profile_image.png" 
-                                        BackgroundColor="Transparent"
-                                        HeightRequest="105"
-                                        HorizontalOptions="Center" VerticalOptions="Center" 
-                                        Margin="0"/>
+            <ffimageloading:CachedImage 
+                Grid.Row="2" Grid.Column="1"
+                Source="background_profile_image.png" 
+                BackgroundColor="Transparent"
+                HeightRequest="105"
+                HorizontalOptions="Center" VerticalOptions="Center" 
+                Margin="0"/>
 
             <circle:CircleImage 
-                            Grid.Row="2" Grid.Column="1"
-                            VerticalOptions="Center" HorizontalOptions="Center"
-                            HeightRequest="150" Margin="0"
-                            Source="{Binding ProfileImageUrl}"/>
+                Grid.Row="2" Grid.Column="1"
+                VerticalOptions="Center" HorizontalOptions="Center"
+                HeightRequest="150" Margin="0"
+                Source="{Binding ProfileImageUrl}"/>
 
 
 
         </Grid>
         <!--Menus-->
-        <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
-                    Text="Editar Perfil"
-                    HorizontalContentAlignment="Start"
-                    Command="{Binding NavigateToProfileCommand}"/>
+        <controls:ExtendedButton 
+            Style="{StaticResource MainMenuButton}" 
+            Text="Editar Perfil"
+            HorizontalContentAlignment="Start"
+            Command="{Binding NavigateToProfileCommand}"/>
         
-        <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
-                    Text="Alterar Localização"
-                    HorizontalContentAlignment="Start"
-                    Command="{Binding NavigateToLocationCommand}"/>
+        <controls:ExtendedButton 
+            Style="{StaticResource MainMenuButton}" 
+            Text="Alterar Localização"
+            HorizontalContentAlignment="Start"
+            Command="{Binding NavigateToLocationCommand}"/>
         
-        <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
-                    Text="Contato"
-                    HorizontalContentAlignment="Start"
-                    Command="{Binding NavigateToContactCommand}"/>
+        <controls:ExtendedButton 
+            Style="{StaticResource MainMenuButton}" 
+            Text="Contato"
+            HorizontalContentAlignment="Start"
+            Command="{Binding NavigateToContactCommand}"/>
         
-        <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
-                    Text="Quero Anunciar"
-                    HorizontalContentAlignment="Start"
-                    Command="{Binding NavigateToAnnounceCommand}"/>
+        <controls:ExtendedButton 
+            Style="{StaticResource MainMenuButton}" 
+            Text="Quero Anunciar"
+            HorizontalContentAlignment="Start"
+            Command="{Binding NavigateToAnnounceCommand}"/>
         
-        <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
-                    Text="Política e Privacidade"
-                    HorizontalContentAlignment="Start"
-                    Command="{Binding NavigateToPrivacyCommand}"/>
+        <controls:ExtendedButton 
+            Style="{StaticResource MainMenuButton}" 
+            Text="Política e Privacidade"
+            HorizontalContentAlignment="Start"
+            Command="{Binding NavigateToPrivacyCommand}"/>
 
-        <controls:ExtendedButton Style="{StaticResource MainMenuButton}" 
-                    Text="Sair"
-                    HorizontalContentAlignment="Start"
-                    HorizontalOptions="StartAndExpand"
-                    VerticalOptions="End"
-                    Command="{Binding LogoffCommand}"/>
+        <controls:ExtendedButton 
+            Style="{StaticResource MainMenuButton}" 
+            Text="Sair"
+            HorizontalContentAlignment="Start"
+            HorizontalOptions="StartAndExpand"
+            VerticalOptions="End"
+            Command="{Binding LogoffCommand}"/>
     </StackLayout>
 </ContentPage>
