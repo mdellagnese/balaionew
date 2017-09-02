@@ -47,7 +47,8 @@
             <Frame
                 Grid.Row="2" Grid.Column="1"
                 BackgroundColor="#B3FFFFFF"
-                HorizontalOptions="Center" VerticalOptions="Center" 
+                HorizontalOptions="Center" VerticalOptions="Center"
+                HeightRequest="80" WidthRequest="80"
                 Margin="0,0,0,15" Padding="0">
                 <circle:CircleImage 
                     Source="{Binding ProfileImageUrl}"
