@@ -33,7 +33,7 @@
             <ffimageloading:CachedImage 
                 Grid.ColumnSpan="3" Grid.RowSpan="3"
                 Source="bg_perfil.png"
-                Aspect="AspectFill" BackgroundColor="White"/>
+                Aspect="AspectFill" BackgroundColor="#99CCCCCC"/>
 
             <Label Grid.ColumnSpan="3"
                    VerticalOptions="End"
@@ -44,21 +44,17 @@
                    Text="{Binding Name}"
                    Margin="5,15,5,5"/>
 
-            <ffimageloading:CachedImage 
+            <Frame
                 Grid.Row="2" Grid.Column="1"
-                Source="background_profile_image.png" 
-                BackgroundColor="Transparent"
-                HeightRequest="105"
+                BackgroundColor="#B3FFFFFF"
                 HorizontalOptions="Center" VerticalOptions="Center" 
-                Margin="0"/>
-
-            <circle:CircleImage 
-                Grid.Row="2" Grid.Column="1"
-                VerticalOptions="Center" HorizontalOptions="Center"
-                HeightRequest="150" Margin="0"
-                Source="{Binding ProfileImageUrl}"/>
-
-
+                Margin="0,0,0,15" Padding="0">
+                <circle:CircleImage 
+                    Source="{Binding ProfileImageUrl}"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    HeightRequest="70"
+                    Margin="5"/>
+            </Frame>
 
         </Grid>
 

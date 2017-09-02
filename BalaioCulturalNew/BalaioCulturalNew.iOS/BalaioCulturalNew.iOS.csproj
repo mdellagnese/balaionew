@@ -428,16 +428,7 @@
     <BundleResource Include="Resources\ticket_free_grey.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\bg_perfil%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\bg_perfil.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\user_perfil.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\bg_perfil%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ticket_icon.png" />
@@ -447,6 +438,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\share_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bg_perfil.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

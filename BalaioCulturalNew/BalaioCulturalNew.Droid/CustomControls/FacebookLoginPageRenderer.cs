@@ -48,7 +48,7 @@ namespace BalaioCulturalNew.Droid.CustomControls
                     //Get facebook Information
                     var graphRequest = new OAuth2Request(
                         "GET",
-                        new Uri("https://graph.facebook.com/me?fields=email,picture.type(normal),name"),
+                        new Uri("https://graph.facebook.com/me?fields=email,picture.type(large),name"),
                         null,
                         userAccount
                     );
