@@ -79,28 +79,30 @@
                                 Aspect="AspectFill"
                                 />
                             <!--Título da categoria-->
-                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
-                                   Text="BALADAS E FESTAS" 
+                            <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                                   Padding="5" Opacity="0.4" BackgroundColor="Black" VerticalOptions="Start" HeightRequest="25">
+                                
+                                <Label Style="{StaticResource LabelTituloEvento}" Text="BALADAS E FESTAS" 
                                    TextColor="White"
                                    FontSize="Micro"
-                                   Margin="5"
-                                   />
+                                   Margin="5"/>    
+                            </Frame>
                             <BoxView 
                                 Grid.Row="0" Grid.Column="0"
-                                HeightRequest="2"
-                                WidthRequest="10"
-                                Color="#C8B31B"
-                                VerticalOptions="Center"
-                                Margin="5,0,0,0"/>
+                                HeightRequest="2" WidthRequest="10"
+                                Color="#C8B31B" VerticalOptions="Center"
+                                Margin="10,0,0,0"/>
+                            
                             <!--Descrição do evento-->
-                            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                            <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                                   Padding="5" Opacity="0.4" BackgroundColor="Black" VerticalOptions="End" Margin="0,20,0,0">
+                                <Label 
                                    Text="Desce Neon Baile: Muita luz negra, make neon e combo duplo até 00h" 
                                    TextColor="White"
-                                   FontSize="Small"
-                                   FontAttributes="Bold"
-                                   Margin="5"
+                                   FontSize="Small" FontAttributes="Bold"
                                    VerticalOptions="StartAndExpand"
-                                   />
+                                   Margin="5"/>
+                            </Frame>
 
                             <Grid Grid.Row="2" Grid.ColumnSpan="3" 
                                   Padding="0" Margin="0">

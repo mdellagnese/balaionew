@@ -24,78 +24,62 @@
         </Grid.RowDefinitions>
 
         <ffimageloading:CachedImage
-            Grid.Row="0" 
             Source="font_logo.png" 
             Aspect="AspectFit" 
-            WidthRequest="150" 
-            Margin="60,10,60,0"
+            WidthRequest="200" 
+            Margin="60,30,60,60"
             />
 
-        <controls:ExtendedButton Grid.Row="1" 
-                Text="ENTRE COM O FACEBOOK"
-                Style="{StaticResource StdButton}"
-                BorderRadius="25"
-                Margin="30,0"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                TextColor="White"
-                BackgroundColor="#3b5998"
-                Command="{Binding FacebookLoginCommand}"
-                />
+        <controls:ExtendedButton 
+            Grid.Row="1" 
+            Text="ENTRE COM O FACEBOOK"
+            Style="{StaticResource StdButton}"
+            VerticalOptions="Center" HorizontalOptions="Center"
+            BackgroundColor="#3b5998" Margin="30,0"
+            Command="{Binding FacebookLoginCommand}"/>
 
-        <Label Grid.Row="2" 
-               Text="OU" 
-               TextColor="White" 
-               HorizontalOptions="CenterAndExpand" 
-               VerticalOptions="Center"
-               FontSize="Micro"/>
+        <Label 
+            Grid.Row="2" Style="{Binding StdLabel}"
+            Text="OU" 
+            HorizontalOptions="CenterAndExpand" 
+            VerticalOptions="Center"
+            FontSize="Micro"/>
 
-
-        <Entry Grid.Row="3"  BackgroundColor="Transparent" 
-                Placeholder="Usuário ou e-mail" 
-                PlaceholderColor="White"
-                TextColor="White"
-                Margin="30,0"
-                Text="{Binding Username}">
+        <Entry Grid.Row="3"  Style="{StaticResource StdEntry}"
+               Text="{Binding Username}" 
+               Placeholder="Usuário ou e-mail" 
+               Margin="30,0">
             <Entry.Effects>
                 <effects:BorderlessEntryEffect />
             </Entry.Effects>
         </Entry>
         <Entry  
-            Grid.Row="4" 
-            BackgroundColor="Transparent" 
-            Placeholder="Senha" 
-            IsPassword="True"
-            TextColor="White"
-            PlaceholderColor="White"
-            Margin="30,0"
-            Text="{Binding Password}">
+            Grid.Row="4" Style="{StaticResource StdEntry}" 
+            Text="{Binding Password}"
+            Placeholder="Senha" IsPassword="True"
+            Margin="30,0">
             <Entry.Effects>
                 <effects:BorderlessEntryEffect />
             </Entry.Effects>
         </Entry>
 
-
         <controls:ExtendedButton 
-                Grid.Row="5" 
-                Text="ENTRAR"
-                Margin="30,0"
-                VerticalOptions="Center"
-                WidthRequest="400"
-                HeightRequest="55"
-                TextColor="White"
-                BackgroundColor="#CCCCCC"
-                HorizontalOptions="Center"
-                BorderRadius="25"           
-                Command="{Binding NavigateToMainMenuCommand}">
+            Grid.Row="5"     
+            Style="{StaticResource PurpleButton}"
+            Text="ENTRAR"
+            Margin="30,0"
+            VerticalOptions="Center"
+            BackgroundColor="#CCCCCC"
+            HorizontalOptions="Center"
+            Command="{Binding NavigateToMainMenuCommand}">
             <controls:ExtendedButton.Triggers>
                 <Trigger
                         TargetType="Button"
                         Property="IsEnabled"
                         Value="True">
                     <Setter
-                            Property="BackgroundColor"
-                            Value="#994F94" />
+                        Property="BackgroundColor"
+                        Value="#994F94" />
                 </Trigger>
             </controls:ExtendedButton.Triggers>
         </controls:ExtendedButton>

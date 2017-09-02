@@ -29,7 +29,7 @@
                 Command="{Binding NewAccountCommand}"
                 HorizontalOptions="CenterAndExpand"
                 />
-            <Label 
+            <Label Style="{Binding StdLabel}"
                 Text="OU"
                 HorizontalOptions="Center" 
                 TextColor="White" 

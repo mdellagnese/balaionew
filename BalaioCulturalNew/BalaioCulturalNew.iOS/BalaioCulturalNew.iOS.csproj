@@ -101,6 +101,14 @@
     <ITunesArtwork Include="iTunesArtwork@2x" />
     <None Include="packages.config" />
     <BundleResource Include="Resources\Fonts\fontawesome.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Bold.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-Bold.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-Thin.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Medium.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Thin.ttf" />
+    <BundleResource Include="Resources\Fonts\Montserrat-Medium.ttf" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BalaioCulturalNew\BalaioCulturalNew.csproj">

@@ -198,6 +198,14 @@
   <ItemGroup>
     <None Include="app.config" />
     <AndroidAsset Include="Assets\fontawesome.ttf" />
+    <AndroidAsset Include="Assets\Montserrat.ttf" />
+    <AndroidAsset Include="Assets\Roboto.ttf" />
+    <AndroidAsset Include="Assets\Roboto-Bold.ttf" />
+    <AndroidAsset Include="Assets\Montserrat-Bold.ttf" />
+    <AndroidAsset Include="Assets\Montserrat-Thin.ttf" />
+    <AndroidAsset Include="Assets\Roboto-Medium.ttf" />
+    <AndroidAsset Include="Assets\Roboto-Thin.ttf" />
+    <AndroidAsset Include="Assets\Montserrat-Medium.ttf" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

@@ -52,10 +52,7 @@ namespace BalaioCulturalNew.ViewModels.Login
                 return new Action(async () => await VerifyUserInfo());
             }
         }
-
-        /// <summary>
-		/// Verifies the user info.
-		/// </summary>
+        
 		public async Task VerifyUserInfo()
         {
             try
