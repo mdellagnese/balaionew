@@ -51,13 +51,16 @@
     <Compile Include="ViewModels\Feed\FeedPageViewModel.cs" />
     <Compile Include="ViewModels\Login\EntryPageViewModel.cs" />
     <Compile Include="ViewModels\Login\LoginPageViewModel.cs" />
-    <Compile Include="ViewModels\Login\NavigateToFacebookEvent.cs" />
+    <Compile Include="Events\NavigateToFacebookEvent.cs" />
     <Compile Include="ViewModels\MenuItems\MyProfilePageViewModel.cs" />
     <Compile Include="ViewModels\Templates\MainDetailPageViewModel.cs" />
     <Compile Include="ViewModels\Templates\MainMenuPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="Views\Feed\EventDetailPage.xaml.cs">
       <DependentUpon>EventDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Feed\EventThumb.xaml.cs">
+      <DependentUpon>EventThumb.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Feed\FeedPage.xaml.cs">
       <DependentUpon>FeedPage.xaml</DependentUpon>
@@ -73,6 +76,9 @@
     </Compile>
     <Compile Include="Views\MenuItems\MyProfilePage.xaml.cs">
       <DependentUpon>MyProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates\HeaderMenu.xaml.cs">
+      <DependentUpon>HeaderMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Templates\MainDetailPage.xaml.cs">
       <DependentUpon>MainDetailPage.xaml</DependentUpon>
@@ -249,6 +255,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\MenuItems\ContactPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Templates\HeaderMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Feed\EventThumb.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

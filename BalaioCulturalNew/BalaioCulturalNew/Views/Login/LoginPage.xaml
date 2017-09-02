@@ -30,7 +30,7 @@
                 HorizontalOptions="CenterAndExpand"
                 />
             <Label Style="{StaticResource StdLabel}"
-                Text="OU"
+                Text="ou"
                 HorizontalOptions="Center" 
                 TextColor="White" 
                 FontSize="Micro"/>

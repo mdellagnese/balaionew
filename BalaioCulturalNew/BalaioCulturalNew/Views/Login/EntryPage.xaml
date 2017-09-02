@@ -32,7 +32,7 @@
 
         <controls:ExtendedButton 
             Grid.Row="1" 
-            Text="ENTRE COM O FACEBOOK"
+            Text="Entre com o Facebook"
             Style="{StaticResource StdButton}"
             VerticalOptions="Center" HorizontalOptions="Center"
             BackgroundColor="#3b5998" Margin="30,0"
@@ -40,7 +40,7 @@
 
         <Label 
             Grid.Row="2" Style="{StaticResource StdLabel}"
-            Text="OU" 
+            Text="ou" 
             HorizontalOptions="CenterAndExpand" 
             VerticalOptions="Center"
             FontSize="Micro"/>
@@ -66,7 +66,7 @@
         <controls:ExtendedButton 
             Grid.Row="5"     
             Style="{StaticResource PurpleButton}"
-            Text="ENTRAR"
+            Text="Entrar"
             Margin="30,0"
             VerticalOptions="Center"
             BackgroundColor="#CCCCCC"

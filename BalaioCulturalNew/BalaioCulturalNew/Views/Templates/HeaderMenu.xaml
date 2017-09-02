@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:circle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="BalaioCulturalNew.Views.Templates.HeaderMenu">
+  <ContentView.Content>
+        <Grid HeightRequest="180" Padding="0" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <ffimageloading:CachedImage 
+                Grid.ColumnSpan="3" Grid.RowSpan="3"
+                Source="bg_perfil.png"
+                Aspect="AspectFill" BackgroundColor="#99CCCCCC"/>
+
+            <Label Grid.ColumnSpan="3"
+                   VerticalOptions="End"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Large"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   Text="{Binding Name}"
+                   Margin="5,15,5,5"/>
+
+            <Frame
+                Grid.Row="2" Grid.Column="1"
+                BackgroundColor="#B3FFFFFF"
+                HorizontalOptions="Center" VerticalOptions="Center"
+                HeightRequest="80" WidthRequest="80"
+                Margin="0,0,0,15" Padding="0">
+                <circle:CircleImage 
+                    Source="{Binding ProfileImageUrl}"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    HeightRequest="70"
+                    Margin="5"/>
+            </Frame>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

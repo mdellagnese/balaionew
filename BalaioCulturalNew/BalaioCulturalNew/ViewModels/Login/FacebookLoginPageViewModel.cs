@@ -1,12 +1,7 @@
-﻿using Prism.Commands;
+﻿using BalaioCulturalNew.Events;
 using Prism.Events;
-using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 
 namespace BalaioCulturalNew.ViewModels.Login
 {

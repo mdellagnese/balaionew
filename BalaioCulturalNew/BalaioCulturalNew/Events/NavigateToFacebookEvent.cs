@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BalaioCulturalNew.ViewModels.Login
+namespace BalaioCulturalNew.Events
 {
     public class NavigateToFacebookEvent : PubSubEvent<bool> { }
 }

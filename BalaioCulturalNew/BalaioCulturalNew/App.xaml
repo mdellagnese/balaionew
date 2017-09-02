@@ -68,6 +68,17 @@
         <Setter Property="BorderRadius" Value="{StaticResource BtnRadius}"></Setter>
       </Style>
 
+      <Style x:Key="FAButton" TargetType="Button">
+        <Setter Property="FontFamily">
+          <Setter.Value>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.iOS>FontAwesome</OnPlatform.iOS>
+              <OnPlatform.Android>fontawesome.ttf#FontAwesome</OnPlatform.Android>
+            </OnPlatform>
+          </Setter.Value>
+        </Setter>
+      </Style>
+
       <Style x:Key="WhiteBtnAsLabel" TargetType="Button">
         <Setter Property="TextColor" Value="White"></Setter>
         <Setter Property="BorderColor" Value="Transparent"></Setter>

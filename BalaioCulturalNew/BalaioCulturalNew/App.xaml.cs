@@ -4,7 +4,6 @@ using Xamarin.Forms;
 using BalaioCulturalNew.Views.Login;
 using BalaioCulturalNew.Views.Templates;
 using BalaioCulturalNew.Views.Feed;
-using Xamarin.Forms.Xaml;
 using BalaioCulturalNew.ViewModels.Login;
 using BalaioCulturalNew.ViewModels;
 using BalaioCulturalNew.ViewModels.Templates;
@@ -32,6 +31,7 @@ namespace BalaioCulturalNew
                    "ios=d6e2c014-7e50-480e-837d-82e0e423d4df;",
                    typeof(Analytics), typeof(Crashes));
 
+ 
             TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
 
             
