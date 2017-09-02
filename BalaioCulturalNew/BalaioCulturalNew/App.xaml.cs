@@ -34,16 +34,17 @@ namespace BalaioCulturalNew
 
             TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
 
+            NavigationService.NavigateAsync("app:///MainPage");
             //Se não tiver usuario logado
-            if (!Application.Current.Properties.ContainsKey("fb_access_token")) {
+            /*if (!Application.Current.Properties.ContainsKey("fb_access_token")) {
                 NavigationService.NavigateAsync("app:///NavigationPage/LoginPage", null, true);
             }
             else
             {
                 //Se já houver token
                 NavigationService.NavigateAsync("app:///MainPage");
-            }
-            
+            }*/
+
         }
 
         protected override void RegisterTypes()

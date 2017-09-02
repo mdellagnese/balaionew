@@ -80,9 +80,10 @@
                                 />
                             <!--Título da categoria-->
                             <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
-                                   Padding="5" Opacity="0.4" BackgroundColor="Black" VerticalOptions="Start" HeightRequest="25">
+                                   Padding="5" BackgroundColor="#80000000" VerticalOptions="Start" HeightRequest="25">
                                 
-                                <Label Style="{StaticResource LabelTituloEvento}" Text="BALADAS E FESTAS" 
+                                <Label Style="{StaticResource LabelTituloEvento}" 
+                                       Text="BALADAS E FESTAS" 
                                    TextColor="White"
                                    FontSize="Micro"
                                    Margin="5"/>    
@@ -95,7 +96,7 @@
                             
                             <!--Descrição do evento-->
                             <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
-                                   Padding="5" Opacity="0.4" BackgroundColor="Black" VerticalOptions="End" Margin="0,20,0,0">
+                                   Padding="5" BackgroundColor="#80000000" VerticalOptions="End" Margin="0,20,0,0">
                                 <Label 
                                    Text="Desce Neon Baile: Muita luz negra, make neon e combo duplo até 00h" 
                                    TextColor="White"

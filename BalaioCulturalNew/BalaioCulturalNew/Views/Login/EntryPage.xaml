@@ -39,7 +39,7 @@
             Command="{Binding FacebookLoginCommand}"/>
 
         <Label 
-            Grid.Row="2" Style="{Binding StdLabel}"
+            Grid.Row="2" Style="{StaticResource StdLabel}"
             Text="OU" 
             HorizontalOptions="CenterAndExpand" 
             VerticalOptions="Center"

@@ -32,27 +32,31 @@
                                 Aspect="AspectFill"
                                 />
                     <!--Título da categoria-->
-                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
-                                   Text="BALADAS E FESTAS" 
+                    <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                        Padding="5" BackgroundColor="#80000000" VerticalOptions="Start" HeightRequest="25">
+
+                        <Label Style="{StaticResource LabelTituloEvento}" 
+                                       Text="BALADAS E FESTAS" 
                                    TextColor="White"
                                    FontSize="Micro"
-                                   Margin="5"
-                                   />
+                                   Margin="5"/>
+                    </Frame>
                     <BoxView 
                         Grid.Row="0" Grid.Column="0"
-                        HeightRequest="2"
-                        WidthRequest="10"
-                        Color="#C8B31B"
-                        VerticalOptions="Center"
-                        Margin="5,0"/>
+                        HeightRequest="2" WidthRequest="10"
+                        Color="#C8B31B" VerticalOptions="Center"
+                        Margin="10,0,0,0"/>
+
                     <!--Descrição do evento-->
-                    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
-                                   Text="Desce Neon Baile: Muita luz negra, make neon e combo duplo até 00h" 
-                                   TextColor="White"
-                                   FontSize="Small"
-                                   FontAttributes="Bold"
-                                   Margin="5,0"
-                                   />
+                    <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                            Padding="5" BackgroundColor="#80000000" VerticalOptions="End" Margin="0,20,0,0">
+                        <Label 
+                                Text="Desce Neon Baile: Muita luz negra, make neon e combo duplo até 00h" 
+                                TextColor="White"
+                                FontSize="Small" FontAttributes="Bold"
+                                VerticalOptions="StartAndExpand"
+                                Margin="5"/>
+                    </Frame>
 
                     <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" 
                                   Padding="0"
@@ -155,9 +159,41 @@
                 HeightRequest="100" 
                 BackgroundColor="Gray"
                 Margin="10,15"></BoxView>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <controls:ExtendedButton 
+                    Style="{StaticResource StdButton}"
+                    BackgroundColor="#FD7400"
+                    WidthRequest="200"
+                    Text="Abrir no Maps"/>
+
+                <controls:ExtendedButton Grid.Column="1"
+                    Style="{StaticResource StdButton}"
+                    BackgroundColor="#FFE11A"
+                    WidthRequest="200"
+                    Text="Comprar Ingresso"/>
+
+                <controls:ExtendedButton Grid.Row="1"
+                    Style="{StaticResource StdButton}" WidthRequest="200"
+                    BackgroundColor="#004358"
+                    Text="Compartilhar"/>
+                
+                <controls:ExtendedButton Grid.Row="1" Grid.Column="1"
+                        Style="{StaticResource PurpleButton}" WidthRequest="200"
+                        Text="Meu Balaio"/>
+                
             </StackLayout>
 
-            <Grid BackgroundColor="{StaticResource BalaioBlue}"
+            <!--<Grid BackgroundColor="{StaticResource BalaioBlue}"
                   HorizontalOptions="CenterAndExpand" Margin="0" Padding="15"
                   VerticalOptions="Center">
                 <Grid.ColumnDefinitions>
@@ -166,7 +202,7 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <!--Bottom Share icon-->
+                --><!--Bottom Share icon--><!--
                 <ffimageloading:CachedImage Grid.Column="0"
                     Source="route_icon.png" HeightRequest="25" WidthRequest="25">
                     <ffimageloading:CachedImage.GestureRecognizers>
@@ -188,7 +224,7 @@
                     </ffimageloading:CachedImage.GestureRecognizers>
                 </ffimageloading:CachedImage>
 
-            </Grid>
+            </Grid>-->
         </StackLayout>
         
     </ScrollView>
