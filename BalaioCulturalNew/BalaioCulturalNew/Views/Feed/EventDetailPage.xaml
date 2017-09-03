@@ -2,16 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              xmlns:local="clr-namespace:BalaioCulturalNew.Views.Feed"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Feed.EventDetailPage"
              Title="Detalhe do evento">
 
     <ScrollView>
-        <StackLayout Padding="10">
-            <!--Cabeçalho-->
+        <StackLayout Padding="5" VerticalOptions="FillAndExpand" HorizontalOptions="Center">
             <local:EventDetailThumb/>
         </StackLayout>
     </ScrollView>

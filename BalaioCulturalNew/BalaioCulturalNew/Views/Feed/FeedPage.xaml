@@ -56,7 +56,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <local:EventThumb/>
+                        <Frame Padding="0,0,2,0" BackgroundColor="#0D000000" Margin="0,0,0,15">
+                            <local:EventThumb/>
+                        </Frame>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

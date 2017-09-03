@@ -51,6 +51,7 @@ namespace BalaioCulturalNew.Droid
         {
             NeedRegistration = obj;
         }
+        
     }
 
     public class AndroidInitializer : IPlatformInitializer

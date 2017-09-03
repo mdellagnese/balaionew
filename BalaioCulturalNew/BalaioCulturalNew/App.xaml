@@ -108,6 +108,13 @@
         <Setter Property="BackgroundColor"  Value="White"></Setter>
       </Style>
 
+      <Style x:Key="NewBlueButton" BasedOn="{StaticResource StdButton}" TargetType="Button">
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Setter Property="BorderColor" Value="{StaticResource BalaioGreen}"></Setter>
+        <Setter Property="BorderWidth" Value="1"></Setter>
+        <Setter Property="BackgroundColor"  Value="{StaticResource BalaioBlue}"></Setter>
+      </Style>
+
 
       <!--Entrys-->
       <Style x:Key="StdEntry" TargetType="Entry">
