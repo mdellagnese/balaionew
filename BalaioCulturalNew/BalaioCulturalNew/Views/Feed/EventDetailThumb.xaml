@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BalaioCulturalNew.Views.Feed.EventDetailThumb"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms">
+    
+  <ContentView.Content>
+    
+      <Frame Padding="0,0,2,0" BackgroundColor="#0D000000" Margin="0,0,0,15">
+                <Grid 
+                ColumnSpacing="0" RowSpacing="0"
+                BackgroundColor="White"
+                Padding="0" 
+                VerticalOptions="Center">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Imagem de plano de fundo-->
+                    <ffimageloading:CachedImage
+                                Grid.RowSpan="2" 
+                                Grid.ColumnSpan="3"
+                                Source="http://lorempixel.com/output/people-q-c-640-480-9.jpg"                               
+                                Aspect="AspectFill"
+                                />
+                    <!--Título da categoria-->
+                    <Frame 
+                    Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                    Padding="5" BackgroundColor="#80000000" VerticalOptions="Start" HeightRequest="25">
+
+                        <Label 
+                        Style="{StaticResource LabelTituloEvento}" 
+                        Text="BALADAS E FESTAS" 
+                        TextColor="White"
+                        FontSize="Micro"
+                        Margin="5"/>
+                    </Frame>
+                    <BoxView 
+                        Grid.Row="0" Grid.Column="0"
+                        HeightRequest="2" WidthRequest="10"
+                        Color="#C8B31B" VerticalOptions="Center"
+                        Margin="10,0,0,0"/>
+
+                    <!--Descrição do evento-->
+                    <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                                   Padding="5" BackgroundColor="#80000000" VerticalOptions="End" Margin="0,20,0,0">
+                        <Label 
+                                   Text="Desce Neon Baile: Muita luz negra, make neon e combo duplo até 00h" 
+                                   TextColor="White"
+                                   FontSize="Small" FontAttributes="Bold"
+                                   VerticalOptions="StartAndExpand"
+                                   Margin="5"/>
+                    </Frame>
+
+                    <Grid Grid.Row="2" Grid.ColumnSpan="3" 
+                                  Padding="0" Margin="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+
+                        <ffimageloading:CachedImage 
+                                    Grid.Column="0"
+                                    Source="icon_clock.png"
+                                    VerticalOptions="Center"
+                                    HeightRequest="20"
+                                />
+                        <Label 
+                                    Grid.Column="1"
+                                    Text="22h - 00h"
+                                    VerticalOptions="Center"
+                                    TextColor="Black"/>
+
+                        <ffimageloading:CachedImage
+                                    Grid.Column="2"
+                                    Source="icon_localiz.png"
+                                    VerticalOptions="Center"
+                                    HeightRequest="20"
+                                    />
+                        <Label Grid.Column="3"
+                                    Text="Sinners" 
+                                    VerticalOptions="Center"
+                                    TextColor="Black"/>
+
+                        <StackLayout 
+                            Grid.Column="4"
+                            Orientation="Horizontal" 
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="Center"
+                            Margin="5,0"
+                            Spacing="10">
+                            <ffimageloading:CachedImage
+                                        Source="ticket_free_grey.png"
+                                        HeightRequest="20"
+                                        />
+                            <ffimageloading:CachedImage
+                                        Source="sun_icon_grey.png"
+                                        HeightRequest="20"
+                                        />
+                            <ffimageloading:CachedImage
+                                        Source="moon_icon_grey.png"
+                                        HeightRequest="20"
+                                        />
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1">
+                            <!--Descrição do Evento-->
+                            <Grid ColumnSpacing="0" RowSpacing="0" Padding="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Label Text="O que?" 
+                    FontSize="Medium" 
+                    FontAttributes="Bold"
+                    TextColor="#C8B31B"/>
+                                <Label Grid.Row="1"
+                    Text="Desce Neon Bail e tal" 
+                    TextColor="Black"/>
+
+                                <Label Grid.Row="2"
+                    Text="O que?" 
+                    FontSize="Medium" 
+                    FontAttributes="Bold"
+                    TextColor="#C8B31B"/>
+
+                                <Label Grid.Row="3"
+                    Text="Sinners Club, Rua lima e silva e bla bla bla bla bla bla bla bla bla bla " 
+                    LineBreakMode="WordWrap"
+                    TextColor="Black"/>
+
+                                <Button Grid.Row="4"
+                    Style="{StaticResource PurpleButton}"
+                    Text="Garanta seu Nome na lista"/>
+
+
+                            </Grid>
+                            <!--Propaganda-->
+                            <BoxView 
+                HeightRequest="100" 
+                BackgroundColor="Gray" Margin="0,10"/>
+                            <!--Compartilhamento-->
+                            <Grid ColumnSpacing="5" RowSpacing="10" HorizontalOptions="CenterAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <controls:ExtendedButton Grid.Row="0" Grid.Column="0"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
+                        Style="{StaticResource WhiteButton}"
+                        Command="{Binding RouteToEventCommand}"
+                        Text="Localização"/>
+
+                                <controls:ExtendedButton Grid.Row="0" Grid.Column="1"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
+                        Style="{StaticResource WhiteButton}"
+                        Command="{Binding BuyTicketToEventCommand}"
+                        Text="Ingresso"/>
+
+                                <controls:ExtendedButton Grid.Row="1" Grid.Column="0"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
+                        Style="{StaticResource WhiteButton}"
+                        Command="{Binding ShareEventCommand}"
+                        Text="Compartilhar"/>
+
+                                <controls:ExtendedButton Grid.Row="1" Grid.Column="1"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
+                        Style="{StaticResource WhiteButton}"
+                        Text="Meu Balaio"/>
+                            </Grid>
+                        </StackLayout>
+                                     
+                    </Grid>
+                </Grid>
+            </Frame>
+        
+    </ContentView.Content>
+</ContentView>

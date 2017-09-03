@@ -12,77 +12,7 @@
     <ScrollView>
         <StackLayout Padding="10">
             <!--Cabeçalho-->
-            <local:EventThumb/>
-            <!--Descrição do Evento-->
-            <Grid ColumnSpacing="0" RowSpacing="0" Padding="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                </Grid.RowDefinitions>
-
-                <Label Text="O que?" 
-                    FontSize="Medium" 
-                    FontAttributes="Bold"
-                    TextColor="#C8B31B"/>
-                <Label Grid.Row="1"
-                    Text="Desce Neon Bail e tal" 
-                    TextColor="Black"/>
-
-                <Label Grid.Row="2"
-                    Text="O que?" 
-                    FontSize="Medium" 
-                    FontAttributes="Bold"
-                    TextColor="#C8B31B"/>
-
-                <Label Grid.Row="3"
-                    Text="Sinners Club, Rua lima e silva e bla bla bla bla bla bla bla bla bla bla " 
-                    LineBreakMode="WordWrap"
-                    TextColor="Black"/>
-
-                <Button Grid.Row="4"
-                    Style="{StaticResource PurpleButton}"
-                    Text="Garanta seu Nome na lista"/>
-
-
-            </Grid>
-            <!--Propaganda-->
-            <BoxView 
-                HeightRequest="100" 
-                BackgroundColor="Gray" Margin="0,10"/>
-            <!--Compartilhamento-->
-            <Grid ColumnSpacing="5" RowSpacing="10" HorizontalOptions="CenterAndExpand">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="40"></RowDefinition>
-                    <RowDefinition Height="40"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
-                <controls:ExtendedButton Grid.Row="0" Grid.Column="0"
-                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
-                        Style="{StaticResource WhiteButton}"
-                        Text="Abrir Localização"/>
-                
-                <controls:ExtendedButton Grid.Row="0" Grid.Column="1"
-                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
-                        Style="{StaticResource WhiteButton}"
-                        Text="Comprar Ingresso"/>
-
-                <controls:ExtendedButton Grid.Row="1" Grid.Column="0"
-                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
-                        Style="{StaticResource WhiteButton}"
-                        Text="Compartilhar"/>
-
-                <controls:ExtendedButton Grid.Row="1" Grid.Column="1"
-                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
-                        Style="{StaticResource WhiteButton}"
-                        Text="Meu Balaio"/>
-            </Grid>
+            <local:EventDetailThumb/>
         </StackLayout>
     </ScrollView>
 

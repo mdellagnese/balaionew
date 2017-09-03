@@ -59,6 +59,9 @@
     <Compile Include="Views\Feed\EventDetailPage.xaml.cs">
       <DependentUpon>EventDetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Feed\EventDetailThumb.xaml.cs">
+      <DependentUpon>EventDetailThumb.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Feed\EventThumb.xaml.cs">
       <DependentUpon>EventThumb.xaml</DependentUpon>
     </Compile>
@@ -273,6 +276,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\Feed\EventThumb.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Feed\EventDetailThumb.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
