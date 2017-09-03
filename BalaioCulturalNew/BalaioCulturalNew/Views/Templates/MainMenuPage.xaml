@@ -3,12 +3,19 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-    xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
-    xmlns:templates="clr-namespace:BalaioCulturalNew.Views.Templates"
     prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:templates="clr-namespace:BalaioCulturalNew.Views.Templates"
+    xmlns:converters="clr-namespace:BalaioCulturalNew.Converters"
+    xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
     x:Class="BalaioCulturalNew.Views.Templates.MainMenuPage"
     Padding="0"
     BackgroundColor="{StaticResource DefaultNavColor}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ItemTappedEventArgsConverter x:Key="itemTappedEventArgsConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     
     <StackLayout 
         Spacing="0">
@@ -16,7 +23,18 @@
         <!-- Topo Menu -->
         <templates:HeaderMenu />
 
-        <ListView x:Name="listMenu" RowHeight="50" ItemsSource="{Binding MenuItems}" SeparatorVisibility="None">
+        <ListView 
+            x:Name="listMenu"
+            ItemsSource="{Binding MenuItems}" SeparatorVisibility="None">
+            
+            <ListView.Behaviors>
+                <behaviors:EventToCommandBehavior 
+                    EventName="ItemTapped" 
+                    Command="{Binding MenuSelectedCommand}"
+                    EventArgsConverter="{StaticResource itemTappedEventArgsConverter}" 
+                    EventArgsParameterPath="Item"/>
+            </ListView.Behaviors>
+            
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

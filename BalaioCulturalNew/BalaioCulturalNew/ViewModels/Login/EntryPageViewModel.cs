@@ -1,15 +1,13 @@
 ﻿using Prism.Commands;
-using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace BalaioCulturalNew.ViewModels.Login
 {
-	public class EntryPageViewModel : BaseViewModel
+    public class EntryPageViewModel : BaseViewModel
 	{
         string _username;
         public string Username
@@ -76,6 +74,16 @@ namespace BalaioCulturalNew.ViewModels.Login
             {
                 await _pageDialogService.DisplayAlertAsync("Erro", ex.Message, "OK");
             }
+        }
+
+        public override void OnNavigatingTo(NavigationParameters parameters)
+        {
+            if(parameters.ContainsKey("logoff"))
+            {
+               Application.Current.Properties["fb_access_token"] = null;
+            }
+
+            base.OnNavigatingTo(parameters);
         }
     }
 }
