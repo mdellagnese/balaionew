@@ -2,12 +2,11 @@
 using System;
 using BalaioCulturalNew.Droid.CustomControls;
 using BalaioCulturalNew.Views.Login;
-using Xamarin.Auth;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 using BalaioCulturalNew.Models;
+using Xamarin.Auth;
 
 [assembly: ExportRenderer(typeof(FacebookLoginPage), typeof(FacebookLoginPageRenderer))]
 

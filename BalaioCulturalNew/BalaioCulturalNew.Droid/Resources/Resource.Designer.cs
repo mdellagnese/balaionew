@@ -26,6 +26,8 @@ namespace BalaioCulturalNew.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLCrypto.Resource.String.ApplicationName = global::BalaioCulturalNew.Droid.Resource.String.ApplicationName;
+			global::PCLCrypto.Resource.String.Hello = global::BalaioCulturalNew.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::BalaioCulturalNew.Droid.Resource.Attribute.actionBarSize;
 			global::XLabs.Forms.Resource.Animation.abc_fade_in = global::BalaioCulturalNew.Droid.Resource.Animation.abc_fade_in;
 			global::XLabs.Forms.Resource.Animation.abc_fade_out = global::BalaioCulturalNew.Droid.Resource.Animation.abc_fade_out;
