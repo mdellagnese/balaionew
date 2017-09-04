@@ -4,61 +4,28 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:templates="clr-namespace:BalaioCulturalNew.Views.Templates"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.MenuItems.MyProfilePage"
              BackgroundColor="{StaticResource BalaioBlue}">
-    <StackLayout>
-        <Grid HeightRequest="180" Padding="0" Margin="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="80"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-            </Grid>
 
-            <ffimageloading:CachedImage Grid.ColumnSpan="3" Grid.RowSpan="3"
-                                        Source="bg_perfil.png"
-                                        Aspect="AspectFill" BackgroundColor="White"/>
+    <StackLayout VerticalOptions="StartAndExpand">
+        <!--Imagem topo-->
+        <templates:HeaderMenu/>
 
-            <Label Grid.ColumnSpan="3"
-                   VerticalOptions="End"
-                   HorizontalTextAlignment="Center"
-                   FontSize="Large"
-                   TextColor="White"
-                   FontAttributes="Bold"
-                   Text="{Binding Name}"
-                   Margin="5,15"/>
+        <!--Opções-->
+        <StackLayout Spacing="5" Padding="5,0">
+            <controls:ExtendedLabel Text="Nome de Usuário" Style="{StaticResource LabelGreen}"/>
+            <controls:ExtendedLabel Text="mdellagnese" TextColor="White"/>
 
-            <Frame 
-                Grid.Row="2" Grid.Column="1"
-                BackgroundColor="White" 
-                VerticalOptions="Center" HorizontalOptions="Center"
-                Padding="0,10" Margin="0,10">
-                <ffimageloading:CachedImage 
-                                HeightRequest="100"
-                                WidthRequest="100"
-                                VerticalOptions="Center"
-                                Aspect="AspectFit"
-                                Source="bg1.png"
-                                Margin="0">
-                    <ffimageloading:CachedImage.Source>
-                        <UriImageSource Uri="{Binding ProfileImageUrl}"></UriImageSource>
-                    </ffimageloading:CachedImage.Source>
-                </ffimageloading:CachedImage>
-            </Frame>
+            <controls:ExtendedLabel Text="E-mail" Style="{StaticResource LabelGreen}"/>
+            <controls:ExtendedEntry Text="mauricio.dellagnese@gmail.com" Style="{StaticResource StdEntry}" HeightRequest="50"/>
 
-        </Grid>
-        <Label Style="{StaticResource LabelGreen}"
-               Text="Nome de Usuário"></Label>
-        <Entry Style="{StaticResource WhiteEntry}"
-               Text="Mauricio Dellagnese"></Entry>
-        <Button Style="{StaticResource BlueBtn}"
-                Text="Salvar"/>
+            <controls:ExtendedButton Image="icon_localiz.png" Text="Atualizar Localização" Style="{StaticResource NewBlueButton}"/>
+        </StackLayout>
+            
+        <controls:ExtendedButton Margin="0,20,0,0"
+            Style="{StaticResource NewBlueButton}" Text="Salvar" VerticalOptions="End"
+            Command="{Binding SaveProfileCommand}"/>
     </StackLayout>
 </ContentPage>

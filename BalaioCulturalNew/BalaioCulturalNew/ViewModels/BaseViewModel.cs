@@ -64,5 +64,7 @@ namespace BalaioCulturalNew.ViewModels
             if (uriText != null)
                 _navigationService.NavigateAsync(uriText);
         }
+
+
     }
 }

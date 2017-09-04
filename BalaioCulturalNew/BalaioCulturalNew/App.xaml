@@ -33,7 +33,7 @@
       
       <Style x:Key="LabelGreen" TargetType="Label" BasedOn="{StaticResource StdLabel}">
         <Setter Property="TextColor" Value="{StaticResource BalaioGreen}"></Setter>
-        <Setter Property="FontSize"  Value="Micro"></Setter>
+        <Setter Property="FontSize"  Value="Small"></Setter>
       </Style>
 
       <Style x:Key="FALabel" TargetType="Label">
@@ -127,7 +127,7 @@
           </Setter.Value>
         </Setter>
         <Setter Property="FontSize" Value="Small"></Setter>
-        <Setter Property="HeightRequest" Value="25"></Setter>
+        <Setter Property="HeightRequest" Value="35"></Setter>
         <Setter Property="BackgroundColor" Value="Transparent"></Setter>
         <Setter Property="PlaceholderColor" Value="White"></Setter>
         <Setter Property="TextColor" Value="White"></Setter>

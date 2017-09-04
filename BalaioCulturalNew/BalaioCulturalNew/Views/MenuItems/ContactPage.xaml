@@ -3,59 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             xmlns:templates="clr-namespace:BalaioCulturalNew.Views.Templates"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.MenuItems.ContactPage"
              Title="Contato">
     <StackLayout BackgroundColor="{StaticResource BalaioBlue}" Padding="10" Spacing="10">
-        <Grid HeightRequest="180" Padding="0" Margin="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="80"></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-            </Grid>
+        <templates:HeaderMenu />
 
-            <ffimageloading:CachedImage Grid.ColumnSpan="3" Grid.RowSpan="3"
-                                        Source="bg_perfil.png"
-                                        Aspect="AspectFill" BackgroundColor="White"/>
-
-            <Label Grid.ColumnSpan="3"
-                   VerticalOptions="End"
-                   HorizontalTextAlignment="Center"
-                   FontSize="Large"
-                   TextColor="White"
-                   FontAttributes="Bold"
-                   Text="{Binding Name}"
-                   Margin="5,15,5,5"/>
-
-            <ffimageloading:CachedImage Grid.Row="2" Grid.Column="1"
-                                        Source="background_profile_image.png" 
-                                        BackgroundColor="Transparent"
-                                        HeightRequest="105" WidthRequest="105"
-                                        HorizontalOptions="Center" VerticalOptions="Center" 
-                                        Margin="0"/>
-
-            <controls:CircleImage 
-                            Grid.Row="2" Grid.Column="1"
-                            VerticalOptions="Center" HorizontalOptions="Center"
-                            HeightRequest="100"
-                            WidthRequest="100"
-                            Aspect="AspectFit" Margin="0">
-                <controls:CircleImage.Source>
-                    <UriImageSource Uri="{Binding ProfileImageUrl}"></UriImageSource>
-                </controls:CircleImage.Source>
-            </controls:CircleImage>
-            
-
-        </Grid>
-        
         <Label Style="{StaticResource LabelGreen}"
                Text="Quer compartilhar algo com a gente?"
                FontSize="Default"
@@ -66,10 +21,10 @@
                FontSize="Default"
                HorizontalOptions="Center" Margin="0,0,0,5"></Label>
         
-        <Editor BackgroundColor="White"
-                TextColor="Black" HeightRequest="150"/>
+        <controls:ExtendedEditor BackgroundColor="{Binding BalaioBlue}"
+                TextColor="White" HeightRequest="150"/>
 
-        <Button Style="{StaticResource BlueBtn}"
+        <controls:ExtendedButton Style="{StaticResource NewBlueButton}"
                 Text="Enviar"/>
 
     </StackLayout>

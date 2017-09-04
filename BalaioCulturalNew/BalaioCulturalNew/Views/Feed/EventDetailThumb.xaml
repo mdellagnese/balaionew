@@ -41,7 +41,7 @@
                     LineBreakMode="WordWrap"
                     TextColor="Black"/>
 
-                    <Button Grid.Row="4"
+                    <controls:ExtendedButton Grid.Row="4"
                         Style="{StaticResource NewBlueButton}"
                         Text="Garanta seu nome na lista"
                         Command="{Binding SendNamesToEventCommand}"/>   
