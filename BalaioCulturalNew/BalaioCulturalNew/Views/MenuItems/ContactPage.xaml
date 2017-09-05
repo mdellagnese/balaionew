@@ -8,7 +8,8 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.MenuItems.ContactPage"
              Title="Contato">
-    <StackLayout BackgroundColor="{StaticResource BalaioBlue}" Padding="10" Spacing="10">
+    
+    <StackLayout BackgroundColor="{StaticResource BalaioBlue}" Spacing="10">
         <templates:HeaderMenu />
 
         <Label Style="{StaticResource LabelGreen}"

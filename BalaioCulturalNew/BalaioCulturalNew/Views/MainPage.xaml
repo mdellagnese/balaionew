@@ -4,21 +4,19 @@
                   xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
                   xmlns:templates="clr-namespace:BalaioCulturalNew.Views.Templates;assembly=BalaioCulturalNew"
                   prism:ViewModelLocator.AutowireViewModel="True"
-                  x:Class="BalaioCulturalNew.Views.MainPage"
-                  >
+                  x:Class="BalaioCulturalNew.Views.MainPage">
+    
     <MasterDetailPage.Master>
         <templates:MainMenuPage Title="☰" Icon="ic_menu_white.png"></templates:MainMenuPage>
     </MasterDetailPage.Master>
+    
     <MasterDetailPage.Detail>
         <NavigationPage BarBackgroundColor="{StaticResource DefaultNavColor}" BarTextColor="{StaticResource BalaioGreen}">
-            <NavigationPage.ToolbarItems>
-                <ToolbarItem Text="Filtro" Order="Primary" Priority="0" Icon="filter_icon.png"></ToolbarItem>
-                <ToolbarItem Text="Busca" Order="Primary" Priority="1" Icon="search_icon.png"></ToolbarItem>
-            </NavigationPage.ToolbarItems>
             <x:Arguments>
                 <templates:MainDetailPage/>
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>
+    
 </MasterDetailPage>
     

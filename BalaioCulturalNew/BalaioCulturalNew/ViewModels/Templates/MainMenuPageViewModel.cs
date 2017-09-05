@@ -77,7 +77,7 @@ namespace BalaioCulturalNew.ViewModels.Templates
         private ObservableCollection<CustomMenuItem> GetMenus()
         {
             var Menus = new ObservableCollection<CustomMenuItem>();
-            Menus.Add(new CustomMenuItem { Text = "Editar Perfil", Uri = "MyProfilePage", Icon = "" });
+            Menus.Add(new CustomMenuItem { Text = "Editar Perfil", Uri = "NavigationPage/MyProfilePage", Icon = "" });
             Menus.Add(new CustomMenuItem { Text = "Alterar Localização", Uri = "MyProfilePage", Icon = "" });
             Menus.Add(new CustomMenuItem { Text = "Contato", Uri = "ContactPage", Icon = "" });
             Menus.Add(new CustomMenuItem { Text = "Quero Anunciar", Uri = "MyProfilePage", Icon = "" });

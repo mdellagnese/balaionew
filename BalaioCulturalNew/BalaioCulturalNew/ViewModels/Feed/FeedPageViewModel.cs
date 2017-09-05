@@ -9,6 +9,7 @@ namespace BalaioCulturalNew.ViewModels.Feed
     public class FeedPageViewModel : BaseViewModel
     {
         public DelegateCommand<string> EventSelectedCommand { get; private set; }
+        public DelegateCommand NavigateToSearchPageCommand { get; private set; }
 
         public FeedPageViewModel(INavigationService navigationService) : base(navigationService)
         {
@@ -21,6 +22,8 @@ namespace BalaioCulturalNew.ViewModels.Feed
 
                 navigationService.NavigateAsync("EventDetailPage", parameters, false);
             });
+
+            NavigateToSearchPageCommand = new DelegateCommand(() => _navigationService.NavigateAsync("SearchPage", null, false));
         }
         
 

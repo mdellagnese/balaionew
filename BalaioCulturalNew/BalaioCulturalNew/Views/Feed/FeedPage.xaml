@@ -7,13 +7,17 @@
              xmlns:converters="clr-namespace:BalaioCulturalNew.Converters"
              xmlns:local="clr-namespace:BalaioCulturalNew.Views.Feed"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="BalaioCulturalNew.Views.Feed.FeedPage"
-             >
+             x:Class="BalaioCulturalNew.Views.Feed.FeedPage">
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:ItemTappedEventArgsConverter x:Key="itemTappedEventArgsConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
+
+    <NavigationPage.ToolbarItems>
+        <ToolbarItem Text="Filtro" Icon="filter_icon.png"></ToolbarItem>
+        <ToolbarItem Text="Busca" Icon="search_icon.png" Command="{Binding NavigateToSearchPageCommand}"></ToolbarItem>
+    </NavigationPage.ToolbarItems>
 
     <StackLayout Padding="10">
         <ListView x:Name="feedList"
