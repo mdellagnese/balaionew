@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:BalaioCulturalNew.Views.Feed"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Feed.EventDetailPage"
-             Title="Detalhe do evento">
+             Title="Anita na Sinners">
 
     <ScrollView>
         <StackLayout Padding="5" VerticalOptions="FillAndExpand" HorizontalOptions="Center">

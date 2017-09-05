@@ -15,6 +15,7 @@
     </ContentPage.Resources>
 
     <NavigationPage.ToolbarItems>
+        <!--Todo: Adicionar ícone de notificação no toolbar de filtros-->
         <ToolbarItem Text="Filtro" Icon="filter_icon.png"></ToolbarItem>
         <ToolbarItem Text="Busca" Icon="search_icon.png" Command="{Binding NavigateToSearchPageCommand}"></ToolbarItem>
     </NavigationPage.ToolbarItems>

@@ -78,6 +78,17 @@
           </Setter.Value>
         </Setter>
       </Style>
+      
+      <Style x:Key="BoldButton" TargetType="Button" BasedOn="{StaticResource StdButton}">
+        <Setter Property="FontFamily">
+          <Setter.Value>
+            <OnPlatform x:TypeArguments="x:String">
+              <OnPlatform.iOS>FontAwesome-Bold</OnPlatform.iOS>
+              <OnPlatform.Android>fontawesome-bold.ttf#FontAwesome-Bold</OnPlatform.Android>
+            </OnPlatform>
+          </Setter.Value>
+        </Setter>
+      </Style>
 
       <Style x:Key="WhiteBtnAsLabel" TargetType="Button">
         <Setter Property="TextColor" Value="White"></Setter>
@@ -115,6 +126,10 @@
         <Setter Property="BackgroundColor"  Value="{StaticResource BalaioBlue}"></Setter>
       </Style>
 
+      <Style x:Key="GreenButton" BasedOn="{StaticResource StdButton}" TargetType="Button">
+        <Setter Property="TextColor" Value="{StaticResource BalaioBlue}"></Setter>
+        <Setter Property="BackgroundColor"  Value="{StaticResource BalaioGreen}"></Setter>
+      </Style>
 
       <!--Entrys-->
       <Style x:Key="StdEntry" TargetType="Entry">

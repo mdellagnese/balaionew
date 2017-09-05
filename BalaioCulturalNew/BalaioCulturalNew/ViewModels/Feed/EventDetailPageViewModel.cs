@@ -21,6 +21,7 @@ namespace BalaioCulturalNew.ViewModels.Feed
 
         public EventDetailPageViewModel(INavigationService navigationService, IPageDialogService pageDialogService) : base(navigationService, pageDialogService)
         {
+            //Todo: Adicionar ao meu balaio todos os eventos que acontecerem aqui
             RouteToEventCommand = new DelegateCommand(GetRouteToEvent);
             BuyTicketToEventCommand = new DelegateCommand(BuyTicketToEvent);
             ShareEventCommand = new DelegateCommand(ShareEvent);

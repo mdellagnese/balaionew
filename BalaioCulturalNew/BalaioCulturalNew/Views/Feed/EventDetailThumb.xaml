@@ -84,8 +84,9 @@
 
                     <controls:ExtendedButton Grid.Row="1" Grid.Column="1"
                         HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
-                        Style="{StaticResource NewBlueButton}"
-                        Text="Meu Balaio"
+                        Style="{StaticResource GreenButton}"
+                        FontAttributes="Bold"
+                        Text="Tenho Interesse"
                         Command="{Binding AddToBalaioEventCommand}"/>
                 </Grid>
             </StackLayout>
