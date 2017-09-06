@@ -94,7 +94,9 @@
         <Setter Property="TextColor" Value="White"></Setter>
         <Setter Property="BorderColor" Value="Transparent"></Setter>
         <Setter Property="BackgroundColor" Value="Transparent"></Setter>
-        <Setter Property="FontSize" Value="Micro"></Setter>
+        <Setter Property="FontSize" Value="Small"></Setter>
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand"></Setter>
+        <Setter Property="VerticalOptions" Value="CenterAndExpand"></Setter>
       </Style>
 
       <Style x:Key="WhiteButton" BasedOn="{StaticResource StdButton}" TargetType="Button">

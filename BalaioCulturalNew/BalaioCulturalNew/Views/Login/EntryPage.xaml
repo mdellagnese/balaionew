@@ -67,7 +67,7 @@
             Grid.Row="5"     
             Style="{StaticResource PurpleButton}"
             Text="Entrar"
-            Margin="30,0"
+            Margin="30,0,30,10"
             VerticalOptions="Center"
             BackgroundColor="#CCCCCC"
             HorizontalOptions="Center"
@@ -85,16 +85,12 @@
         </controls:ExtendedButton>
 
         <controls:ExtendedButton Grid.Row="6" 
-                            HorizontalOptions="Center"
                             Text="Esqueceu seus dados?"
                             Style="{StaticResource WhiteBtnAsLabel}"
-                            VerticalOptions="Center"
                             Command="{Binding NavigateToForgotPageCommand}"/>
 
         <controls:ExtendedButton Grid.Row="7" 
-                            HorizontalOptions="Center"
                             Text="Ainda não tem uma conta? Cadastre-se"
-                            VerticalOptions="StartAndExpand"
                             Style="{StaticResource WhiteBtnAsLabel}"
                             Command="{Binding NavigateToRegisterPageCommand}"
                             />

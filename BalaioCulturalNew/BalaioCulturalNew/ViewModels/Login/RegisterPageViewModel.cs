@@ -32,6 +32,8 @@ namespace BalaioCulturalNew.ViewModels.Login
 
         public DelegateCommand NavigateToEntryPageCommand { get; private set; }
         public DelegateCommand FacebookRegisterCommand { get; private set; }
+        public DelegateCommand CloseModalCities { get; private set; }
+        
 
         public RegisterPageViewModel(INavigationService navigationService) : base(navigationService)
         {
@@ -39,6 +41,8 @@ namespace BalaioCulturalNew.ViewModels.Login
             FacebookRegisterCommand = new DelegateCommand(FacebookRegister);
 
             AvailableCities = new ObservableCollection<string> { "Porto Alegre", "São Paulo" };
+
+            CloseModalCities = new DelegateCommand(() => ShowModalCities = false);
 
             ShowModalCities = true;
         }

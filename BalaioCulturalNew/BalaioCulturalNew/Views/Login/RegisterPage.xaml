@@ -92,16 +92,25 @@
         <ContentView 
             AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
             IsVisible="{Binding ShowModalCities}" 
-            BackgroundColor="#80000000" Padding="50">
+            BackgroundColor="#80000000" Padding="30">
 
             <Frame CornerRadius="10" BackgroundColor="White"
                    Padding="10"
                    HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
                 <StackLayout BackgroundColor="White" Spacing="10">
-                    <Label 
-                        Text="Selecione sua cidade"
-                        HorizontalOptions="Center" 
-                        FontSize="Large" TextColor="{StaticResource BalaioBlue}"/>
+                    <StackLayout 
+                        Orientation="Horizontal" Spacing="10"
+                        HorizontalOptions="StartAndExpand" VerticalOptions="Center">
+
+                        <Label HorizontalOptions="Start" VerticalOptions="Center"
+                            Text="Selecione sua cidade"
+                            FontSize="Medium" TextColor="{StaticResource BalaioBlue}"/>
+
+                        <controls:ExtendedButton Margin="30,0,0,0" HorizontalOptions="EndAndExpand" VerticalOptions="Center" HorizontalContentAlignment="End"
+                            BorderWidth="0" BackgroundColor="Transparent"
+                            Text="X" FontSize="Medium"
+                            Command="{Binding CloseModalCities}"/>
+                    </StackLayout>
 
                     <ListView x:Name="citiesList" ItemsSource="{Binding AvailableCities}">
                         <ListView.ItemTemplate>
