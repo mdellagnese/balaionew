@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BalaioCulturalNew.Views.Feed.EventDetailThumb"
              xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:local="clr-namespace:BalaioCulturalNew.Views.Feed">
     
   <ContentView.Content>
@@ -44,15 +45,14 @@
                     <controls:ExtendedButton Grid.Row="4"
                         Style="{StaticResource NewBlueButton}"
                         Text="Garanta seu nome na lista"
-                        Command="{Binding SendNamesToEventCommand}"/>   
+                        Command="{Binding SendNamesToEventCommand}"
+                        Image="ic_list.png" Margin="0,10,0,0"/>   
 
                 </Grid>
                 
                 <!--Propaganda-->
-                <BoxView 
-                    HeightRequest="100" 
-                    BackgroundColor="Gray" Margin="0,10"/>
-
+                <ffimageloading:CachedImage Source="ad.png" Aspect="AspectFill" HeightRequest="120" Margin="0,10"/>
+                
                 <!--Compartilhamento-->
                 <Grid ColumnSpacing="5" RowSpacing="10" HorizontalOptions="CenterAndExpand">
                     <Grid.RowDefinitions>
@@ -65,25 +65,25 @@
                     </Grid.ColumnDefinitions>
 
                     <controls:ExtendedButton Grid.Row="0" Grid.Column="0"
-                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="ic_location_white.png"
                         Style="{StaticResource NewBlueButton}"
                         Text="Abrir Localização"
                         Command="{Binding RouteToEventCommand}"/>
 
                     <controls:ExtendedButton Grid.Row="0" Grid.Column="1"
-                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="ic_share_white.png"
                         Style="{StaticResource NewBlueButton}"
                         Text="Comprar Ingresso"
-                        Command="{Binding BuyTicketToEventCommand}"/>
+                        Command="{Binding BuyTicketToEventCommand}" BackgroundColor="#FD7400" />
 
                     <controls:ExtendedButton Grid.Row="1" Grid.Column="0"
-                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
-                        Style="{StaticResource NewBlueButton}"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="ic_share_white.png"
+                        Style="{StaticResource PurpleButton}"
                         Text="Compartilhar"
                         Command="{Binding ShareEventCommand}"/>
 
                     <controls:ExtendedButton Grid.Row="1" Grid.Column="1"
-                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="icon_localiz.png"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="Center" Image="ic_star_border_white.png"
                         Style="{StaticResource GreenButton}"
                         FontAttributes="Bold"
                         Text="Tenho Interesse"
