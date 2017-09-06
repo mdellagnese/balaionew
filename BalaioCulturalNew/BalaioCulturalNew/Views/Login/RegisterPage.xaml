@@ -6,11 +6,11 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="BalaioCulturalNew.Views.Login.RegisterPage"
              BackgroundImage="bg2.png"
-             Padding="30,20"
              NavigationPage.HasNavigationBar="False">
 
-    
-    <Grid>
+    <AbsoluteLayout>
+        <Grid Padding="30,20"
+            AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"></RowDefinition>
                 <RowDefinition Height="55"></RowDefinition>
@@ -87,5 +87,34 @@
                     Style="{StaticResource WhiteBtnAsLabel}"
                     Command="{Binding NavigateToEntryPageCommand}"/>
 
-    </Grid>
+        </Grid>
+
+        <ContentView 
+            AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+            IsVisible="{Binding ShowModalCities}" 
+            BackgroundColor="#80000000" Padding="50">
+
+            <Frame CornerRadius="10" BackgroundColor="White"
+                   Padding="10"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+                <StackLayout BackgroundColor="White" Spacing="10">
+                    <Label 
+                        Text="Selecione sua cidade"
+                        HorizontalOptions="Center" 
+                        FontSize="Large" TextColor="{StaticResource BalaioBlue}"/>
+
+                    <ListView x:Name="citiesList" ItemsSource="{Binding AvailableCities}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding .}"></TextCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Frame>
+            
+            
+        </ContentView>
+    </AbsoluteLayout>
+   
 </ContentPage>

@@ -27,7 +27,7 @@ namespace BalaioCulturalNew.ViewModels.Feed
         }
         
 
-        private ObservableCollection<String> _events;
+        private ObservableCollection<string> _events;
         public ObservableCollection<string> Events
         {
             get { return _events; }

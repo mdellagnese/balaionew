@@ -7,6 +7,10 @@ namespace BalaioCulturalNew.Views.Login
         public RegisterPage()
         {
             InitializeComponent();
+
+            citiesList.ItemSelected += (sender, e) => {
+                ((ListView)sender).SelectedItem = null;
+            };
         }
     }
 }
