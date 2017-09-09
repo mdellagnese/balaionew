@@ -115,7 +115,7 @@
                     <ListView x:Name="citiesList" ItemsSource="{Binding AvailableCities}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <TextCell Text="{Binding .}"></TextCell>
+                                <TextCell Text="{Binding .}" TextColor="{StaticResource Purple}"></TextCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
