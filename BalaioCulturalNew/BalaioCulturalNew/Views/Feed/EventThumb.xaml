@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="BalaioCulturalNew.Views.Feed.EventThumb">
-  <ContentView.Content>
+    <ContentView.Content>
 
         <Grid 
             ColumnSpacing="0" RowSpacing="0"
@@ -26,7 +26,7 @@
             <ffimageloading:CachedImage
                                 Grid.RowSpan="2" 
                                 Grid.ColumnSpan="3"
-                                Source="http://lorempixel.com/output/people-q-c-640-480-9.jpg"                               
+                                Source="https://assets9.domestika.org/project-items/001/654/589/lorem_vector-big.png"                               
                                 Aspect="AspectFill"
                                 />
             <!--Título da categoria-->
@@ -49,13 +49,13 @@
 
             <!--Descrição do evento-->
             <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
-                                   Padding="5" BackgroundColor="#80000000" VerticalOptions="End" Margin="0,20,0,0">
+                Padding="5" BackgroundColor="#80000000" VerticalOptions="End" Margin="0,20,0,0">
                 <Label 
-                                   Text="Desce Neon Baile: Muita luz negra, make neon e combo duplo até 00h" 
-                                   TextColor="White"
-                                   FontSize="Small" FontAttributes="Bold"
-                                   VerticalOptions="StartAndExpand"
-                                   Margin="5"/>
+                    Text="Desce Neon Baile: Muita luz negra, make neon e combo duplo até 00h" 
+                    TextColor="White"
+                    FontSize="Small" FontAttributes="Bold"
+                    VerticalOptions="StartAndExpand"
+                    Margin="5"/>
             </Frame>
 
             <Grid Grid.Row="2" Grid.ColumnSpan="3" 
